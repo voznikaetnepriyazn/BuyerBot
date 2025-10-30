@@ -1,0 +1,974 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\User\\source\\repos\\soa\\ByuerApp\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{AFC14C71-6D99-48D1-8062-F1B26120E6D8}|ByuerApp\\ByuerApp.csproj|c:\\users\\user\\source\\repos\\soa\\byuerapp\\byuerapp\\models\\exceptionmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AFC14C71-6D99-48D1-8062-F1B26120E6D8}|ByuerApp\\ByuerApp.csproj|solutionrelative:byuerapp\\models\\exceptionmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AFC14C71-6D99-48D1-8062-F1B26120E6D8}|ByuerApp\\ByuerApp.csproj|c:\\users\\user\\source\\repos\\soa\\byuerapp\\byuerapp\\domain\\entities\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AFC14C71-6D99-48D1-8062-F1B26120E6D8}|ByuerApp\\ByuerApp.csproj|solutionrelative:byuerapp\\domain\\entities\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AFC14C71-6D99-48D1-8062-F1B26120E6D8}|ByuerApp\\ByuerApp.csproj|c:\\users\\user\\source\\repos\\soa\\byuerapp\\byuerapp\\domain\\entities\\good.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AFC14C71-6D99-48D1-8062-F1B26120E6D8}|ByuerApp\\ByuerApp.csproj|solutionrelative:byuerapp\\domain\\entities\\good.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AFC14C71-6D99-48D1-8062-F1B26120E6D8}|ByuerApp\\ByuerApp.csproj|c:\\users\\user\\source\\repos\\soa\\byuerapp\\byuerapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AFC14C71-6D99-48D1-8062-F1B26120E6D8}|ByuerApp\\ByuerApp.csproj|solutionrelative:byuerapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AFC14C71-6D99-48D1-8062-F1B26120E6D8}|ByuerApp\\ByuerApp.csproj|c:\\users\\user\\source\\repos\\soa\\byuerapp\\byuerapp\\infrastructure\\buyerappcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AFC14C71-6D99-48D1-8062-F1B26120E6D8}|ByuerApp\\ByuerApp.csproj|solutionrelative:byuerapp\\infrastructure\\buyerappcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AFC14C71-6D99-48D1-8062-F1B26120E6D8}|ByuerApp\\ByuerApp.csproj|c:\\users\\user\\source\\repos\\soa\\byuerapp\\byuerapp\\infrastructure\\goodrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AFC14C71-6D99-48D1-8062-F1B26120E6D8}|ByuerApp\\ByuerApp.csproj|solutionrelative:byuerapp\\infrastructure\\goodrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AFC14C71-6D99-48D1-8062-F1B26120E6D8}|ByuerApp\\ByuerApp.csproj|c:\\users\\user\\source\\repos\\soa\\byuerapp\\byuerapp\\infrastructure\\brandrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AFC14C71-6D99-48D1-8062-F1B26120E6D8}|ByuerApp\\ByuerApp.csproj|solutionrelative:byuerapp\\infrastructure\\brandrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B37B1233-0026-425A-AE3F-353C53F9FACB}|TestProject30\\addAsyncController.csproj|c:\\users\\user\\source\\repos\\soa\\byuerapp\\testproject30\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B37B1233-0026-425A-AE3F-353C53F9FACB}|TestProject30\\addAsyncController.csproj|solutionrelative:testproject30\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AFC14C71-6D99-48D1-8062-F1B26120E6D8}|ByuerApp\\ByuerApp.csproj|c:\\users\\user\\source\\repos\\soa\\byuerapp\\byuerapp\\domain\\interfaces\\igoodrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AFC14C71-6D99-48D1-8062-F1B26120E6D8}|ByuerApp\\ByuerApp.csproj|solutionrelative:byuerapp\\domain\\interfaces\\igoodrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AFC14C71-6D99-48D1-8062-F1B26120E6D8}|ByuerApp\\ByuerApp.csproj|c:\\users\\user\\source\\repos\\soa\\byuerapp\\byuerapp\\domain\\interfaces\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AFC14C71-6D99-48D1-8062-F1B26120E6D8}|ByuerApp\\ByuerApp.csproj|solutionrelative:byuerapp\\domain\\interfaces\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AFC14C71-6D99-48D1-8062-F1B26120E6D8}|ByuerApp\\ByuerApp.csproj|c:\\users\\user\\source\\repos\\soa\\byuerapp\\byuerapp\\infrastructure\\customerrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AFC14C71-6D99-48D1-8062-F1B26120E6D8}|ByuerApp\\ByuerApp.csproj|solutionrelative:byuerapp\\infrastructure\\customerrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AFC14C71-6D99-48D1-8062-F1B26120E6D8}|ByuerApp\\ByuerApp.csproj|c:\\users\\user\\source\\repos\\soa\\byuerapp\\byuerapp\\domain\\servises\\customerservise.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AFC14C71-6D99-48D1-8062-F1B26120E6D8}|ByuerApp\\ByuerApp.csproj|solutionrelative:byuerapp\\domain\\servises\\customerservise.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AFC14C71-6D99-48D1-8062-F1B26120E6D8}|ByuerApp\\ByuerApp.csproj|c:\\users\\user\\source\\repos\\soa\\byuerapp\\byuerapp\\controllers\\customercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AFC14C71-6D99-48D1-8062-F1B26120E6D8}|ByuerApp\\ByuerApp.csproj|solutionrelative:byuerapp\\controllers\\customercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E9C2E726-F569-413F-8D8B-271D3ACF1CDF}|TestProject2\\getAllAsyncController.csproj|c:\\users\\user\\source\\repos\\soa\\byuerapp\\testproject2\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E9C2E726-F569-413F-8D8B-271D3ACF1CDF}|TestProject2\\getAllAsyncController.csproj|solutionrelative:testproject2\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AFC14C71-6D99-48D1-8062-F1B26120E6D8}|ByuerApp\\ByuerApp.csproj|c:\\users\\user\\source\\repos\\soa\\byuerapp\\byuerapp\\domain\\interfaces\\ibrandservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AFC14C71-6D99-48D1-8062-F1B26120E6D8}|ByuerApp\\ByuerApp.csproj|solutionrelative:byuerapp\\domain\\interfaces\\ibrandservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AFC14C71-6D99-48D1-8062-F1B26120E6D8}|ByuerApp\\ByuerApp.csproj|c:\\users\\user\\source\\repos\\soa\\byuerapp\\byuerapp\\domain\\interfaces\\itypesservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AFC14C71-6D99-48D1-8062-F1B26120E6D8}|ByuerApp\\ByuerApp.csproj|solutionrelative:byuerapp\\domain\\interfaces\\itypesservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AFC14C71-6D99-48D1-8062-F1B26120E6D8}|ByuerApp\\ByuerApp.csproj|c:\\users\\user\\source\\repos\\soa\\byuerapp\\byuerapp\\domain\\interfaces\\icustomerservise.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AFC14C71-6D99-48D1-8062-F1B26120E6D8}|ByuerApp\\ByuerApp.csproj|solutionrelative:byuerapp\\domain\\interfaces\\icustomerservise.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AFC14C71-6D99-48D1-8062-F1B26120E6D8}|ByuerApp\\ByuerApp.csproj|c:\\users\\user\\source\\repos\\soa\\byuerapp\\byuerapp\\domain\\interfaces\\igoodservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AFC14C71-6D99-48D1-8062-F1B26120E6D8}|ByuerApp\\ByuerApp.csproj|solutionrelative:byuerapp\\domain\\interfaces\\igoodservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AFC14C71-6D99-48D1-8062-F1B26120E6D8}|ByuerApp\\ByuerApp.csproj|c:\\users\\user\\source\\repos\\soa\\byuerapp\\byuerapp\\domain\\servises\\brandservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AFC14C71-6D99-48D1-8062-F1B26120E6D8}|ByuerApp\\ByuerApp.csproj|solutionrelative:byuerapp\\domain\\servises\\brandservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AFC14C71-6D99-48D1-8062-F1B26120E6D8}|ByuerApp\\ByuerApp.csproj|c:\\users\\user\\source\\repos\\soa\\byuerapp\\byuerapp\\domain\\interfaces\\ibrandrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AFC14C71-6D99-48D1-8062-F1B26120E6D8}|ByuerApp\\ByuerApp.csproj|solutionrelative:byuerapp\\domain\\interfaces\\ibrandrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84C03E67-9FF3-4588-8A37-D8C9AEF85CC1}|TestProject6\\addAsyncController.csproj|c:\\users\\user\\source\\repos\\soa\\byuerapp\\testproject6\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84C03E67-9FF3-4588-8A37-D8C9AEF85CC1}|TestProject6\\addAsyncController.csproj|solutionrelative:testproject6\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AF7BD80A-23B9-4A59-B678-97DD0307F14B}|TestProject4\\updateAsyncController.csproj|c:\\users\\user\\source\\repos\\soa\\byuerapp\\testproject4\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AF7BD80A-23B9-4A59-B678-97DD0307F14B}|TestProject4\\updateAsyncController.csproj|solutionrelative:testproject4\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EEB3E559-A131-40F8-8D75-12E0161683E5}|TestProject1\\getByIdAsyncControllerTests.csproj|c:\\users\\user\\source\\repos\\soa\\byuerapp\\testproject1\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EEB3E559-A131-40F8-8D75-12E0161683E5}|TestProject1\\getByIdAsyncControllerTests.csproj|solutionrelative:testproject1\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AFC14C71-6D99-48D1-8062-F1B26120E6D8}|ByuerApp\\ByuerApp.csproj|c:\\users\\user\\source\\repos\\soa\\byuerapp\\byuerapp\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{AFC14C71-6D99-48D1-8062-F1B26120E6D8}|ByuerApp\\ByuerApp.csproj|solutionrelative:byuerapp\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5DC5B8B9-578B-4BE4-876F-C2CB875A6AA3}|TestProject5\\deleteAsyncController.csproj|c:\\users\\user\\source\\repos\\soa\\byuerapp\\testproject5\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5DC5B8B9-578B-4BE4-876F-C2CB875A6AA3}|TestProject5\\deleteAsyncController.csproj|solutionrelative:testproject5\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ED37A347-3012-4ADE-89EA-E4A8105FB3ED}|TestProject3\\addAsyncController.csproj|c:\\users\\user\\source\\repos\\soa\\byuerapp\\testproject3\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ED37A347-3012-4ADE-89EA-E4A8105FB3ED}|TestProject3\\addAsyncController.csproj|solutionrelative:testproject3\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E9C2E726-F569-413F-8D8B-271D3ACF1CDF}|TestProject2\\getAllAsyncController.csproj|c:\\users\\user\\source\\repos\\soa\\byuerapp\\testproject2\\getallasynccontroller.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{E9C2E726-F569-413F-8D8B-271D3ACF1CDF}|TestProject2\\getAllAsyncController.csproj|solutionrelative:testproject2\\getallasynccontroller.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5E1411DB-9A6B-4B28-AC13-1DF99C6F4693}|TestProject16\\deleteAsyncController.csproj|c:\\users\\user\\source\\repos\\soa\\byuerapp\\testproject16\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5E1411DB-9A6B-4B28-AC13-1DF99C6F4693}|TestProject16\\deleteAsyncController.csproj|solutionrelative:testproject16\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ED37A347-3012-4ADE-89EA-E4A8105FB3ED}|TestProject3\\addAsyncController.csproj|c:\\users\\user\\source\\repos\\soa\\byuerapp\\testproject3\\addasynccontroller.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{ED37A347-3012-4ADE-89EA-E4A8105FB3ED}|TestProject3\\addAsyncController.csproj|solutionrelative:testproject3\\addasynccontroller.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AFC14C71-6D99-48D1-8062-F1B26120E6D8}|ByuerApp\\ByuerApp.csproj|c:\\users\\user\\source\\repos\\soa\\byuerapp\\byuerapp\\controllers\\goodcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AFC14C71-6D99-48D1-8062-F1B26120E6D8}|ByuerApp\\ByuerApp.csproj|solutionrelative:byuerapp\\controllers\\goodcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AFC14C71-6D99-48D1-8062-F1B26120E6D8}|ByuerApp\\ByuerApp.csproj|c:\\users\\user\\source\\repos\\soa\\byuerapp\\byuerapp\\controllers\\brandcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AFC14C71-6D99-48D1-8062-F1B26120E6D8}|ByuerApp\\ByuerApp.csproj|solutionrelative:byuerapp\\controllers\\brandcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AFC14C71-6D99-48D1-8062-F1B26120E6D8}|ByuerApp\\ByuerApp.csproj|c:\\users\\user\\source\\repos\\soa\\byuerapp\\byuerapp\\domain\\servises\\goodservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AFC14C71-6D99-48D1-8062-F1B26120E6D8}|ByuerApp\\ByuerApp.csproj|solutionrelative:byuerapp\\domain\\servises\\goodservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AFC14C71-6D99-48D1-8062-F1B26120E6D8}|ByuerApp\\ByuerApp.csproj|c:\\users\\user\\source\\repos\\soa\\byuerapp\\byuerapp\\infrastructure\\repositorybase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AFC14C71-6D99-48D1-8062-F1B26120E6D8}|ByuerApp\\ByuerApp.csproj|solutionrelative:byuerapp\\infrastructure\\repositorybase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AFC14C71-6D99-48D1-8062-F1B26120E6D8}|ByuerApp\\ByuerApp.csproj|c:\\users\\user\\source\\repos\\soa\\byuerapp\\byuerapp\\domain\\entities\\brand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AFC14C71-6D99-48D1-8062-F1B26120E6D8}|ByuerApp\\ByuerApp.csproj|solutionrelative:byuerapp\\domain\\entities\\brand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AFC14C71-6D99-48D1-8062-F1B26120E6D8}|ByuerApp\\ByuerApp.csproj|c:\\users\\user\\source\\repos\\soa\\byuerapp\\byuerapp\\controllers\\typescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AFC14C71-6D99-48D1-8062-F1B26120E6D8}|ByuerApp\\ByuerApp.csproj|solutionrelative:byuerapp\\controllers\\typescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AFC14C71-6D99-48D1-8062-F1B26120E6D8}|ByuerApp\\ByuerApp.csproj|c:\\users\\user\\source\\repos\\soa\\byuerapp\\byuerapp\\infrastructure\\typesrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AFC14C71-6D99-48D1-8062-F1B26120E6D8}|ByuerApp\\ByuerApp.csproj|solutionrelative:byuerapp\\infrastructure\\typesrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AFC14C71-6D99-48D1-8062-F1B26120E6D8}|ByuerApp\\ByuerApp.csproj|c:\\users\\user\\source\\repos\\soa\\byuerapp\\byuerapp\\domain\\entities\\types.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AFC14C71-6D99-48D1-8062-F1B26120E6D8}|ByuerApp\\ByuerApp.csproj|solutionrelative:byuerapp\\domain\\entities\\types.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7789BCE3-CD50-452E-966B-771356DD5510}|TestProject29\\updateAsyncController.csproj|c:\\users\\user\\source\\repos\\soa\\byuerapp\\testproject29\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7789BCE3-CD50-452E-966B-771356DD5510}|TestProject29\\updateAsyncController.csproj|solutionrelative:testproject29\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{75EB5BEC-7DF4-4EDB-AF3D-B88C085302BC}|TestProject27\\getByIdAsyncControllerTests.csproj|c:\\users\\user\\source\\repos\\soa\\byuerapp\\testproject27\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{75EB5BEC-7DF4-4EDB-AF3D-B88C085302BC}|TestProject27\\getByIdAsyncControllerTests.csproj|solutionrelative:testproject27\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{456E844C-8DBD-4C65-B328-ADD0F5C5A7F0}|TestProject28\\getAllAsyncController.csproj|c:\\users\\user\\source\\repos\\soa\\byuerapp\\testproject28\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{456E844C-8DBD-4C65-B328-ADD0F5C5A7F0}|TestProject28\\getAllAsyncController.csproj|solutionrelative:testproject28\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88EA0634-5860-43AA-9FB5-2033BDBB27B8}|TestProject31\\deleteAsyncController.csproj|c:\\users\\user\\source\\repos\\soa\\byuerapp\\testproject31\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{88EA0634-5860-43AA-9FB5-2033BDBB27B8}|TestProject31\\deleteAsyncController.csproj|solutionrelative:testproject31\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4C8989BA-F519-4FAC-A91F-DAEE8EE1C60B}|TestProject20\\restOfGoodController.csproj|c:\\users\\user\\source\\repos\\soa\\byuerapp\\testproject20\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4C8989BA-F519-4FAC-A91F-DAEE8EE1C60B}|TestProject20\\restOfGoodController.csproj|solutionrelative:testproject20\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB3166FA-D64A-4971-8B62-B07839C8FD46}|TestProject19\\isAvaliableForOrderController.csproj|c:\\users\\user\\source\\repos\\soa\\byuerapp\\testproject19\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB3166FA-D64A-4971-8B62-B07839C8FD46}|TestProject19\\isAvaliableForOrderController.csproj|solutionrelative:testproject19\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{928D5812-E7E0-4818-96DD-6B26A79B93CF}|TestProject18\\getListOfGoodsByTypeController.csproj|c:\\users\\user\\source\\repos\\soa\\byuerapp\\testproject18\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{928D5812-E7E0-4818-96DD-6B26A79B93CF}|TestProject18\\getListOfGoodsByTypeController.csproj|solutionrelative:testproject18\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{52EF21AF-510C-404E-8B8F-341C29B8C01F}|TestProject17\\getListOfGoodsByBrandController.csproj|c:\\users\\user\\source\\repos\\soa\\byuerapp\\testproject17\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{52EF21AF-510C-404E-8B8F-341C29B8C01F}|TestProject17\\getListOfGoodsByBrandController.csproj|solutionrelative:testproject17\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1076D9A7-7235-4F0C-B3D9-562B7C485E6C}|TestProject12\\getByIdAsyncController.csproj|c:\\users\\user\\source\\repos\\soa\\byuerapp\\testproject12\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1076D9A7-7235-4F0C-B3D9-562B7C485E6C}|TestProject12\\getByIdAsyncController.csproj|solutionrelative:testproject12\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F6025B1C-15FF-4FD6-98BD-F0B562344BE8}|TestProject13\\getAllAsyncController.csproj|c:\\users\\user\\source\\repos\\soa\\byuerapp\\testproject13\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F6025B1C-15FF-4FD6-98BD-F0B562344BE8}|TestProject13\\getAllAsyncController.csproj|solutionrelative:testproject13\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58598238-9D63-475E-A418-5B072D4E8FD5}|TestProject14\\addAsync.csproj|c:\\users\\user\\source\\repos\\soa\\byuerapp\\testproject14\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58598238-9D63-475E-A418-5B072D4E8FD5}|TestProject14\\addAsync.csproj|solutionrelative:testproject14\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D7128D0F-7657-4C67-BEF4-CD32F194FD47}|TestProject7\\updateAsyncContoller.csproj|c:\\users\\user\\source\\repos\\soa\\byuerapp\\testproject7\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D7128D0F-7657-4C67-BEF4-CD32F194FD47}|TestProject7\\updateAsyncContoller.csproj|solutionrelative:testproject7\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD8A2CD5-53B2-45DD-8868-6E6C58EB30C1}|TestProject9\\isCustomerCreatedController.csproj|c:\\users\\user\\source\\repos\\soa\\byuerapp\\testproject9\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD8A2CD5-53B2-45DD-8868-6E6C58EB30C1}|TestProject9\\isCustomerCreatedController.csproj|solutionrelative:testproject9\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{818DA9B5-58E6-4C3F-9048-ED17C17887B9}|TestProject10\\getByIdAsyncControllerTests.csproj|c:\\users\\user\\source\\repos\\soa\\byuerapp\\testproject10\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{818DA9B5-58E6-4C3F-9048-ED17C17887B9}|TestProject10\\getByIdAsyncControllerTests.csproj|solutionrelative:testproject10\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{19B33611-8C3B-446D-A4AD-E286B8289F3E}|TestProject11\\getAllAsyncController.csproj|c:\\users\\user\\source\\repos\\soa\\byuerapp\\testproject11\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{19B33611-8C3B-446D-A4AD-E286B8289F3E}|TestProject11\\getAllAsyncController.csproj|solutionrelative:testproject11\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C98E64FA-F434-423E-B77D-7539729CE42F}|TestProject8\\deleteAsyncController.csproj|c:\\users\\user\\source\\repos\\soa\\byuerapp\\testproject8\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C98E64FA-F434-423E-B77D-7539729CE42F}|TestProject8\\deleteAsyncController.csproj|solutionrelative:testproject8\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{52EF21AF-510C-404E-8B8F-341C29B8C01F}|TestProject17\\getListOfGoodsByBrandController.csproj|c:\\users\\user\\source\\repos\\soa\\byuerapp\\testproject17\\getlistofgoodsbybrandcontroller.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{52EF21AF-510C-404E-8B8F-341C29B8C01F}|TestProject17\\getListOfGoodsByBrandController.csproj|solutionrelative:testproject17\\getlistofgoodsbybrandcontroller.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{19B33611-8C3B-446D-A4AD-E286B8289F3E}|TestProject11\\getAllAsyncController.csproj|c:\\users\\user\\source\\repos\\soa\\byuerapp\\testproject11\\getallasynccontroller.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{19B33611-8C3B-446D-A4AD-E286B8289F3E}|TestProject11\\getAllAsyncController.csproj|solutionrelative:testproject11\\getallasynccontroller.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EEB3E559-A131-40F8-8D75-12E0161683E5}|TestProject1\\getByIdAsyncControllerTests.csproj|c:\\users\\user\\source\\repos\\soa\\byuerapp\\testproject1\\getbyidasynccontrollertests.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{EEB3E559-A131-40F8-8D75-12E0161683E5}|TestProject1\\getByIdAsyncControllerTests.csproj|solutionrelative:testproject1\\getbyidasynccontrollertests.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AFC14C71-6D99-48D1-8062-F1B26120E6D8}|ByuerApp\\ByuerApp.csproj|c:\\users\\user\\source\\repos\\soa\\byuerapp\\byuerapp\\domain\\servises\\typesservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AFC14C71-6D99-48D1-8062-F1B26120E6D8}|ByuerApp\\ByuerApp.csproj|solutionrelative:byuerapp\\domain\\servises\\typesservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AFC14C71-6D99-48D1-8062-F1B26120E6D8}|ByuerApp\\ByuerApp.csproj|c:\\users\\user\\source\\repos\\soa\\byuerapp\\byuerapp\\domain\\interfaces\\itypesrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AFC14C71-6D99-48D1-8062-F1B26120E6D8}|ByuerApp\\ByuerApp.csproj|solutionrelative:byuerapp\\domain\\interfaces\\itypesrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40151A2F-AD31-4212-8CE9-921CA290C656}|TestProject15\\updateAsyncController.csproj|c:\\users\\user\\source\\repos\\soa\\byuerapp\\testproject15\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{40151A2F-AD31-4212-8CE9-921CA290C656}|TestProject15\\updateAsyncController.csproj|solutionrelative:testproject15\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 7,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "GoodRepository.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\soa\\ByuerApp\\ByuerApp\\Infrastructure\\GoodRepository.cs",
+              "RelativeDocumentMoniker": "ByuerApp\\Infrastructure\\GoodRepository.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\soa\\ByuerApp\\ByuerApp\\Infrastructure\\GoodRepository.cs",
+              "RelativeToolTip": "ByuerApp\\Infrastructure\\GoodRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-13T13:22:22.029Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "IBrandService.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\soa\\ByuerApp\\ByuerApp\\Domain\\Interfaces\\IBrandService.cs",
+              "RelativeDocumentMoniker": "ByuerApp\\Domain\\Interfaces\\IBrandService.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\soa\\ByuerApp\\ByuerApp\\Domain\\Interfaces\\IBrandService.cs",
+              "RelativeToolTip": "ByuerApp\\Domain\\Interfaces\\IBrandService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-13T12:10:27.307Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "UnitTest1.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\soa\\ByuerApp\\TestProject30\\UnitTest1.cs",
+              "RelativeDocumentMoniker": "TestProject30\\UnitTest1.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\soa\\ByuerApp\\TestProject30\\UnitTest1.cs",
+              "RelativeToolTip": "TestProject30\\UnitTest1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEUAAABBAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-26T19:25:03.363Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "BuyerAppContext.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\soa\\ByuerApp\\ByuerApp\\Infrastructure\\BuyerAppContext.cs",
+              "RelativeDocumentMoniker": "ByuerApp\\Infrastructure\\BuyerAppContext.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\soa\\ByuerApp\\ByuerApp\\Infrastructure\\BuyerAppContext.cs",
+              "RelativeToolTip": "ByuerApp\\Infrastructure\\BuyerAppContext.cs",
+              "ViewState": "AgIAAG4AAAAAAAAAAAAAAHoAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-02T15:03:31.291Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\soa\\ByuerApp\\ByuerApp\\Program.cs",
+              "RelativeDocumentMoniker": "ByuerApp\\Program.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\soa\\ByuerApp\\ByuerApp\\Program.cs",
+              "RelativeToolTip": "ByuerApp\\Program.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAAB4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-29T08:31:08.854Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Customer.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\soa\\ByuerApp\\ByuerApp\\Domain\\Entities\\Customer.cs",
+              "RelativeDocumentMoniker": "ByuerApp\\Domain\\Entities\\Customer.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\soa\\ByuerApp\\ByuerApp\\Domain\\Entities\\Customer.cs",
+              "RelativeToolTip": "ByuerApp\\Domain\\Entities\\Customer.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAxwAsAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-05T19:42:58.314Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Good.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\soa\\ByuerApp\\ByuerApp\\Domain\\Entities\\Good.cs",
+              "RelativeDocumentMoniker": "ByuerApp\\Domain\\Entities\\Good.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\soa\\ByuerApp\\ByuerApp\\Domain\\Entities\\Good.cs",
+              "RelativeToolTip": "ByuerApp\\Domain\\Entities\\Good.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-06T17:05:44.308Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ExceptionMiddleware.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\soa\\ByuerApp\\ByuerApp\\Models\\ExceptionMiddleware.cs",
+              "RelativeDocumentMoniker": "ByuerApp\\Models\\ExceptionMiddleware.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\soa\\ByuerApp\\ByuerApp\\Models\\ExceptionMiddleware.cs",
+              "RelativeToolTip": "ByuerApp\\Models\\ExceptionMiddleware.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-02T15:51:14.767Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "UnitTest1.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\soa\\ByuerApp\\TestProject2\\UnitTest1.cs",
+              "RelativeDocumentMoniker": "TestProject2\\UnitTest1.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\soa\\ByuerApp\\TestProject2\\UnitTest1.cs",
+              "RelativeToolTip": "TestProject2\\UnitTest1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEUAAABBAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-26T11:51:09.036Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "CustomerController.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\soa\\ByuerApp\\ByuerApp\\Controllers\\CustomerController.cs",
+              "RelativeDocumentMoniker": "ByuerApp\\Controllers\\CustomerController.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\soa\\ByuerApp\\ByuerApp\\Controllers\\CustomerController.cs",
+              "RelativeToolTip": "ByuerApp\\Controllers\\CustomerController.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAEEAAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-01T12:55:53.689Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "BrandRepository.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\soa\\ByuerApp\\ByuerApp\\Infrastructure\\BrandRepository.cs",
+              "RelativeDocumentMoniker": "ByuerApp\\Infrastructure\\BrandRepository.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\soa\\ByuerApp\\ByuerApp\\Infrastructure\\BrandRepository.cs",
+              "RelativeToolTip": "ByuerApp\\Infrastructure\\BrandRepository.cs",
+              "ViewState": "AgIAABwAAAAAAAAAAAAkwC0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-13T13:18:41.186Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "IGoodRepository.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\soa\\ByuerApp\\ByuerApp\\Domain\\Interfaces\\IGoodRepository.cs",
+              "RelativeDocumentMoniker": "ByuerApp\\Domain\\Interfaces\\IGoodRepository.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\soa\\ByuerApp\\ByuerApp\\Domain\\Interfaces\\IGoodRepository.cs",
+              "RelativeToolTip": "ByuerApp\\Domain\\Interfaces\\IGoodRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAABCAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-13T17:45:01.517Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "IRepository.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\soa\\ByuerApp\\ByuerApp\\Domain\\Interfaces\\IRepository.cs",
+              "RelativeDocumentMoniker": "ByuerApp\\Domain\\Interfaces\\IRepository.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\soa\\ByuerApp\\ByuerApp\\Domain\\Interfaces\\IRepository.cs",
+              "RelativeToolTip": "ByuerApp\\Domain\\Interfaces\\IRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-29T10:16:41.68Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "CustomerRepository.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\soa\\ByuerApp\\ByuerApp\\Infrastructure\\CustomerRepository.cs",
+              "RelativeDocumentMoniker": "ByuerApp\\Infrastructure\\CustomerRepository.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\soa\\ByuerApp\\ByuerApp\\Infrastructure\\CustomerRepository.cs",
+              "RelativeToolTip": "ByuerApp\\Infrastructure\\CustomerRepository.cs",
+              "ViewState": "AgIAABcAAAAAAAAAAAAqwC4AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-30T15:23:08.848Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "CustomerServise.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\soa\\ByuerApp\\ByuerApp\\Domain\\Servises\\CustomerServise.cs",
+              "RelativeDocumentMoniker": "ByuerApp\\Domain\\Servises\\CustomerServise.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\soa\\ByuerApp\\ByuerApp\\Domain\\Servises\\CustomerServise.cs",
+              "RelativeToolTip": "ByuerApp\\Domain\\Servises\\CustomerServise.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-19T21:02:41.838Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "ITypesService.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\soa\\ByuerApp\\ByuerApp\\Domain\\Interfaces\\ITypesService.cs",
+              "RelativeDocumentMoniker": "ByuerApp\\Domain\\Interfaces\\ITypesService.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\soa\\ByuerApp\\ByuerApp\\Domain\\Interfaces\\ITypesService.cs",
+              "RelativeToolTip": "ByuerApp\\Domain\\Interfaces\\ITypesService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-13T12:34:23.796Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "ICustomerServise.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\soa\\ByuerApp\\ByuerApp\\Domain\\Interfaces\\ICustomerServise.cs",
+              "RelativeDocumentMoniker": "ByuerApp\\Domain\\Interfaces\\ICustomerServise.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\soa\\ByuerApp\\ByuerApp\\Domain\\Interfaces\\ICustomerServise.cs",
+              "RelativeToolTip": "ByuerApp\\Domain\\Interfaces\\ICustomerServise.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-19T21:06:00.286Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "IGoodService.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\soa\\ByuerApp\\ByuerApp\\Domain\\Interfaces\\IGoodService.cs",
+              "RelativeDocumentMoniker": "ByuerApp\\Domain\\Interfaces\\IGoodService.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\soa\\ByuerApp\\ByuerApp\\Domain\\Interfaces\\IGoodService.cs",
+              "RelativeToolTip": "ByuerApp\\Domain\\Interfaces\\IGoodService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-13T12:11:07.483Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "BrandService.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\soa\\ByuerApp\\ByuerApp\\Domain\\Servises\\BrandService.cs",
+              "RelativeDocumentMoniker": "ByuerApp\\Domain\\Servises\\BrandService.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\soa\\ByuerApp\\ByuerApp\\Domain\\Servises\\BrandService.cs",
+              "RelativeToolTip": "ByuerApp\\Domain\\Servises\\BrandService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-13T11:57:31.821Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "IBrandRepository.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\soa\\ByuerApp\\ByuerApp\\Domain\\Interfaces\\IBrandRepository.cs",
+              "RelativeDocumentMoniker": "ByuerApp\\Domain\\Interfaces\\IBrandRepository.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\soa\\ByuerApp\\ByuerApp\\Domain\\Interfaces\\IBrandRepository.cs",
+              "RelativeToolTip": "ByuerApp\\Domain\\Interfaces\\IBrandRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-13T17:26:23.427Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "UnitTest1.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\soa\\ByuerApp\\TestProject6\\UnitTest1.cs",
+              "RelativeDocumentMoniker": "TestProject6\\UnitTest1.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\soa\\ByuerApp\\TestProject6\\UnitTest1.cs",
+              "RelativeToolTip": "TestProject6\\UnitTest1.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAQwEUAAABHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-26T18:11:53.3Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "UnitTest1.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\soa\\ByuerApp\\TestProject4\\UnitTest1.cs",
+              "RelativeDocumentMoniker": "TestProject4\\UnitTest1.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\soa\\ByuerApp\\TestProject4\\UnitTest1.cs",
+              "RelativeToolTip": "TestProject4\\UnitTest1.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-26T18:06:45.136Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "UnitTest1.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\soa\\ByuerApp\\TestProject1\\UnitTest1.cs",
+              "RelativeDocumentMoniker": "TestProject1\\UnitTest1.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\soa\\ByuerApp\\TestProject1\\UnitTest1.cs",
+              "RelativeToolTip": "TestProject1\\UnitTest1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAABDAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-24T08:31:21.621Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\soa\\ByuerApp\\ByuerApp\\appsettings.json",
+              "RelativeDocumentMoniker": "ByuerApp\\appsettings.json",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\soa\\ByuerApp\\ByuerApp\\appsettings.json",
+              "RelativeToolTip": "ByuerApp\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-03-13T13:28:29.881Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "UnitTest1.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\soa\\ByuerApp\\TestProject5\\UnitTest1.cs",
+              "RelativeDocumentMoniker": "TestProject5\\UnitTest1.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\soa\\ByuerApp\\TestProject5\\UnitTest1.cs",
+              "RelativeToolTip": "TestProject5\\UnitTest1.cs",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAYwE4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-26T18:08:07.623Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "UnitTest1.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\soa\\ByuerApp\\TestProject3\\UnitTest1.cs",
+              "RelativeDocumentMoniker": "TestProject3\\UnitTest1.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\soa\\ByuerApp\\TestProject3\\UnitTest1.cs",
+              "RelativeToolTip": "TestProject3\\UnitTest1.cs",
+              "ViewState": "AgIAABwAAAAAAAAAAAAQwCUAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-26T18:01:35.38Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "UnitTest1.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\soa\\ByuerApp\\TestProject16\\UnitTest1.cs",
+              "RelativeDocumentMoniker": "TestProject16\\UnitTest1.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\soa\\ByuerApp\\TestProject16\\UnitTest1.cs",
+              "RelativeToolTip": "TestProject16\\UnitTest1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-26T19:08:57.433Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "getAllAsyncController.csproj",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\soa\\ByuerApp\\TestProject2\\getAllAsyncController.csproj",
+              "RelativeDocumentMoniker": "TestProject2\\getAllAsyncController.csproj",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\soa\\ByuerApp\\TestProject2\\getAllAsyncController.csproj",
+              "RelativeToolTip": "TestProject2\\getAllAsyncController.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-03-26T18:10:01.561Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "addAsyncController.csproj",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\soa\\ByuerApp\\TestProject3\\addAsyncController.csproj",
+              "RelativeDocumentMoniker": "TestProject3\\addAsyncController.csproj",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\soa\\ByuerApp\\TestProject3\\addAsyncController.csproj",
+              "RelativeToolTip": "TestProject3\\addAsyncController.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-03-27T08:48:07.199Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "GoodController.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\soa\\ByuerApp\\ByuerApp\\Controllers\\GoodController.cs",
+              "RelativeDocumentMoniker": "ByuerApp\\Controllers\\GoodController.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\soa\\ByuerApp\\ByuerApp\\Controllers\\GoodController.cs",
+              "RelativeToolTip": "ByuerApp\\Controllers\\GoodController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAE4AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-10T18:37:42.845Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "BrandController.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\soa\\ByuerApp\\ByuerApp\\Controllers\\BrandController.cs",
+              "RelativeDocumentMoniker": "ByuerApp\\Controllers\\BrandController.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\soa\\ByuerApp\\ByuerApp\\Controllers\\BrandController.cs",
+              "RelativeToolTip": "ByuerApp\\Controllers\\BrandController.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAAwC4AAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-10T18:39:55.821Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "GoodService.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\soa\\ByuerApp\\ByuerApp\\Domain\\Servises\\GoodService.cs",
+              "RelativeDocumentMoniker": "ByuerApp\\Domain\\Servises\\GoodService.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\soa\\ByuerApp\\ByuerApp\\Domain\\Servises\\GoodService.cs",
+              "RelativeToolTip": "ByuerApp\\Domain\\Servises\\GoodService.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAuwBoAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-13T11:57:59.625Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "RepositoryBase.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\soa\\ByuerApp\\ByuerApp\\Infrastructure\\RepositoryBase.cs",
+              "RelativeDocumentMoniker": "ByuerApp\\Infrastructure\\RepositoryBase.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\soa\\ByuerApp\\ByuerApp\\Infrastructure\\RepositoryBase.cs",
+              "RelativeToolTip": "ByuerApp\\Infrastructure\\RepositoryBase.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAABCAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-31T20:17:14.23Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "Brand.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\soa\\ByuerApp\\ByuerApp\\Domain\\Entities\\Brand.cs",
+              "RelativeDocumentMoniker": "ByuerApp\\Domain\\Entities\\Brand.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\soa\\ByuerApp\\ByuerApp\\Domain\\Entities\\Brand.cs",
+              "RelativeToolTip": "ByuerApp\\Domain\\Entities\\Brand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-05T13:44:48.647Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "TypesController.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\soa\\ByuerApp\\ByuerApp\\Controllers\\TypesController.cs",
+              "RelativeDocumentMoniker": "ByuerApp\\Controllers\\TypesController.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\soa\\ByuerApp\\ByuerApp\\Controllers\\TypesController.cs",
+              "RelativeToolTip": "ByuerApp\\Controllers\\TypesController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC4AAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-10T18:40:11.437Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "TypesRepository.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\soa\\ByuerApp\\ByuerApp\\Infrastructure\\TypesRepository.cs",
+              "RelativeDocumentMoniker": "ByuerApp\\Infrastructure\\TypesRepository.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\soa\\ByuerApp\\ByuerApp\\Infrastructure\\TypesRepository.cs",
+              "RelativeToolTip": "ByuerApp\\Infrastructure\\TypesRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAC0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-13T13:22:34.418Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "Types.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\soa\\ByuerApp\\ByuerApp\\Domain\\Entities\\Types.cs",
+              "RelativeDocumentMoniker": "ByuerApp\\Domain\\Entities\\Types.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\soa\\ByuerApp\\ByuerApp\\Domain\\Entities\\Types.cs",
+              "RelativeToolTip": "ByuerApp\\Domain\\Entities\\Types.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAlAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-05T14:02:34.831Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "UnitTest1.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\soa\\ByuerApp\\TestProject29\\UnitTest1.cs",
+              "RelativeDocumentMoniker": "TestProject29\\UnitTest1.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\soa\\ByuerApp\\TestProject29\\UnitTest1.cs",
+              "RelativeToolTip": "TestProject29\\UnitTest1.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-26T19:24:32.212Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "UnitTest1.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\soa\\ByuerApp\\TestProject31\\UnitTest1.cs",
+              "RelativeDocumentMoniker": "TestProject31\\UnitTest1.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\soa\\ByuerApp\\TestProject31\\UnitTest1.cs",
+              "RelativeToolTip": "TestProject31\\UnitTest1.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABwAAABBAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-26T19:25:26.283Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "UnitTest1.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\soa\\ByuerApp\\TestProject27\\UnitTest1.cs",
+              "RelativeDocumentMoniker": "TestProject27\\UnitTest1.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\soa\\ByuerApp\\TestProject27\\UnitTest1.cs",
+              "RelativeToolTip": "TestProject27\\UnitTest1.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAADkAAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-26T19:19:37.927Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "UnitTest1.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\soa\\ByuerApp\\TestProject28\\UnitTest1.cs",
+              "RelativeDocumentMoniker": "TestProject28\\UnitTest1.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\soa\\ByuerApp\\TestProject28\\UnitTest1.cs",
+              "RelativeToolTip": "TestProject28\\UnitTest1.cs",
+              "ViewState": "AQIAADsAAAAAAAAAAAAgwBkAAAAnAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-26T19:22:05.054Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "UnitTest1.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\soa\\ByuerApp\\TestProject20\\UnitTest1.cs",
+              "RelativeDocumentMoniker": "TestProject20\\UnitTest1.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\soa\\ByuerApp\\TestProject20\\UnitTest1.cs",
+              "RelativeToolTip": "TestProject20\\UnitTest1.cs",
+              "ViewState": "AQIAAEMAAAAAAAAAAAAAAB4AAABVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-26T19:10:58.088Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "UnitTest1.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\soa\\ByuerApp\\TestProject19\\UnitTest1.cs",
+              "RelativeDocumentMoniker": "TestProject19\\UnitTest1.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\soa\\ByuerApp\\TestProject19\\UnitTest1.cs",
+              "RelativeToolTip": "TestProject19\\UnitTest1.cs",
+              "ViewState": "AQIAAD4AAAAAAAAAAAAgwE0AAABVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-26T19:10:32.088Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "UnitTest1.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\soa\\ByuerApp\\TestProject18\\UnitTest1.cs",
+              "RelativeDocumentMoniker": "TestProject18\\UnitTest1.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\soa\\ByuerApp\\TestProject18\\UnitTest1.cs",
+              "RelativeToolTip": "TestProject18\\UnitTest1.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-26T19:10:09.063Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "UnitTest1.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\soa\\ByuerApp\\TestProject17\\UnitTest1.cs",
+              "RelativeDocumentMoniker": "TestProject17\\UnitTest1.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\soa\\ByuerApp\\TestProject17\\UnitTest1.cs",
+              "RelativeToolTip": "TestProject17\\UnitTest1.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAEoAAABOAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-26T19:09:46.977Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 45,
+              "Title": "UnitTest1.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\soa\\ByuerApp\\TestProject12\\UnitTest1.cs",
+              "RelativeDocumentMoniker": "TestProject12\\UnitTest1.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\soa\\ByuerApp\\TestProject12\\UnitTest1.cs",
+              "RelativeToolTip": "TestProject12\\UnitTest1.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAUwDQAAAA3AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-26T19:07:04.353Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 46,
+              "Title": "UnitTest1.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\soa\\ByuerApp\\TestProject13\\UnitTest1.cs",
+              "RelativeDocumentMoniker": "TestProject13\\UnitTest1.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\soa\\ByuerApp\\TestProject13\\UnitTest1.cs",
+              "RelativeToolTip": "TestProject13\\UnitTest1.cs",
+              "ViewState": "AQIAADwAAAAAAAAAAAAYwEoAAAAOAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-26T19:07:25.923Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 47,
+              "Title": "UnitTest1.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\soa\\ByuerApp\\TestProject14\\UnitTest1.cs",
+              "RelativeDocumentMoniker": "TestProject14\\UnitTest1.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\soa\\ByuerApp\\TestProject14\\UnitTest1.cs",
+              "RelativeToolTip": "TestProject14\\UnitTest1.cs",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAABkAAAA4AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-26T19:07:51.599Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 49,
+              "Title": "UnitTest1.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\soa\\ByuerApp\\TestProject9\\UnitTest1.cs",
+              "RelativeDocumentMoniker": "TestProject9\\UnitTest1.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\soa\\ByuerApp\\TestProject9\\UnitTest1.cs",
+              "RelativeToolTip": "TestProject9\\UnitTest1.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAEkAAABKAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-26T18:23:42.154Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 48,
+              "Title": "UnitTest1.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\soa\\ByuerApp\\TestProject7\\UnitTest1.cs",
+              "RelativeDocumentMoniker": "TestProject7\\UnitTest1.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\soa\\ByuerApp\\TestProject7\\UnitTest1.cs",
+              "RelativeToolTip": "TestProject7\\UnitTest1.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAEUAAABHAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-26T18:22:53.277Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 50,
+              "Title": "UnitTest1.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\soa\\ByuerApp\\TestProject10\\UnitTest1.cs",
+              "RelativeDocumentMoniker": "TestProject10\\UnitTest1.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\soa\\ByuerApp\\TestProject10\\UnitTest1.cs",
+              "RelativeToolTip": "TestProject10\\UnitTest1.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAEUAAABHAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-26T18:24:02.683Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 51,
+              "Title": "UnitTest1.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\soa\\ByuerApp\\TestProject11\\UnitTest1.cs",
+              "RelativeDocumentMoniker": "TestProject11\\UnitTest1.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\soa\\ByuerApp\\TestProject11\\UnitTest1.cs",
+              "RelativeToolTip": "TestProject11\\UnitTest1.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAEUAAABHAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-26T18:24:47.733Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 52,
+              "Title": "UnitTest1.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\soa\\ByuerApp\\TestProject8\\UnitTest1.cs",
+              "RelativeDocumentMoniker": "TestProject8\\UnitTest1.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\soa\\ByuerApp\\TestProject8\\UnitTest1.cs",
+              "RelativeToolTip": "TestProject8\\UnitTest1.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAEMAAABHAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-26T18:23:22.958Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 53,
+              "Title": "getListOfGoodsByBrandController.csproj",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\soa\\ByuerApp\\TestProject17\\getListOfGoodsByBrandController.csproj",
+              "RelativeDocumentMoniker": "TestProject17\\getListOfGoodsByBrandController.csproj",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\soa\\ByuerApp\\TestProject17\\getListOfGoodsByBrandController.csproj",
+              "RelativeToolTip": "TestProject17\\getListOfGoodsByBrandController.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-03-27T11:15:46.716Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 58,
+              "Title": "UnitTest1.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\soa\\ByuerApp\\TestProject15\\UnitTest1.cs",
+              "RelativeDocumentMoniker": "TestProject15\\UnitTest1.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\soa\\ByuerApp\\TestProject15\\UnitTest1.cs",
+              "RelativeToolTip": "TestProject15\\UnitTest1.cs",
+              "ViewState": "AQIAABwAAAAAAAAAAAAQwBkAAAA/AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-26T19:08:34.71Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 54,
+              "Title": "getAllAsyncController.csproj",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\soa\\ByuerApp\\TestProject11\\getAllAsyncController.csproj",
+              "RelativeDocumentMoniker": "TestProject11\\getAllAsyncController.csproj",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\soa\\ByuerApp\\TestProject11\\getAllAsyncController.csproj",
+              "RelativeToolTip": "TestProject11\\getAllAsyncController.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-03-27T08:50:39.628Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 55,
+              "Title": "getByIdAsyncControllerTests.csproj",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\soa\\ByuerApp\\TestProject1\\getByIdAsyncControllerTests.csproj",
+              "RelativeDocumentMoniker": "TestProject1\\getByIdAsyncControllerTests.csproj",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\soa\\ByuerApp\\TestProject1\\getByIdAsyncControllerTests.csproj",
+              "RelativeToolTip": "TestProject1\\getByIdAsyncControllerTests.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-03-24T17:44:57.919Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 56,
+              "Title": "TypesService.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\soa\\ByuerApp\\ByuerApp\\Domain\\Servises\\TypesService.cs",
+              "RelativeDocumentMoniker": "ByuerApp\\Domain\\Servises\\TypesService.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\soa\\ByuerApp\\ByuerApp\\Domain\\Servises\\TypesService.cs",
+              "RelativeToolTip": "ByuerApp\\Domain\\Servises\\TypesService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-13T12:03:45.383Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 57,
+              "Title": "ITypesRepository.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\soa\\ByuerApp\\ByuerApp\\Domain\\Interfaces\\ITypesRepository.cs",
+              "RelativeDocumentMoniker": "ByuerApp\\Domain\\Interfaces\\ITypesRepository.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\soa\\ByuerApp\\ByuerApp\\Domain\\Interfaces\\ITypesRepository.cs",
+              "RelativeToolTip": "ByuerApp\\Domain\\Interfaces\\ITypesRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-13T17:46:17.644Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+C:\Users\User\source\repos\ByuerApp\TestProject2\obj\Debug\net8.0\TestProject2.csproj.AssemblyReference.cache
+C:\Users\User\source\repos\ByuerApp\TestProject2\obj\Debug\net8.0\TestProject2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\source\repos\ByuerApp\TestProject2\obj\Debug\net8.0\TestProject2.AssemblyInfoInputs.cache
+C:\Users\User\source\repos\ByuerApp\TestProject2\obj\Debug\net8.0\TestProject2.AssemblyInfo.cs
+C:\Users\User\source\repos\ByuerApp\TestProject2\obj\Debug\net8.0\TestProject2.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\ByuerApp\TestProject2\obj\Debug\net8.0\TestProject2.sourcelink.json

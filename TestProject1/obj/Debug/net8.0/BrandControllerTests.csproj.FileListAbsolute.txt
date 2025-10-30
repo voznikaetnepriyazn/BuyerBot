@@ -1,0 +1,6 @@
+C:\Users\User\source\repos\ByuerApp\TestProject1\obj\Debug\net8.0\BrandControllerTests.csproj.AssemblyReference.cache
+C:\Users\User\source\repos\ByuerApp\TestProject1\obj\Debug\net8.0\BrandControllerTests.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\source\repos\ByuerApp\TestProject1\obj\Debug\net8.0\BrandControllerTests.AssemblyInfoInputs.cache
+C:\Users\User\source\repos\ByuerApp\TestProject1\obj\Debug\net8.0\BrandControllerTests.AssemblyInfo.cs
+C:\Users\User\source\repos\ByuerApp\TestProject1\obj\Debug\net8.0\BrandControllerTests.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\ByuerApp\TestProject1\obj\Debug\net8.0\BrandControllerTests.sourcelink.json

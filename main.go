@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"os"
 	"log/slog"
-	"url-shortener\internall\config"
+	".\order\internal\config"
 )
 
 const (
@@ -23,6 +23,12 @@ func main() {
 	log.Info("starting url-shortener", slog.String("env", cfg.Env))
 
 	log.Debug("debug messages are enabled")
+
+	storage, err := postgresql.New(cfg.StoragePath)
+	if err != nil{
+		log.Error("failed to init storage", sl.Err(err))
+		os.Exit(1)
+	}
 }
 
 func setUpLogger(env string) {//конфигурация логгера

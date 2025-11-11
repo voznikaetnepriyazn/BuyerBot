@@ -39,3 +39,23 @@ func New(storagePath string) (*Storage, error) {
 
 	return &Storage{db: db}, nil
 }
+
+func (s *Storage) addURL(urlToSave string, alias string) (int64, error) {
+
+}
+
+func (s *Storage) deleteURL(urlToSave string, alias string) (int64, error) {
+
+}
+
+func (s *Storage) getAllURL(urlToSave string, alias string) (int64, error) {
+
+}
+
+func (s *Storage) getByIdURL(urlToSave string, alias string) (int64, error) {
+
+}
+
+func (s *Storage) updateURL(urlToSave string, alias string) (int64, error) {
+
+}

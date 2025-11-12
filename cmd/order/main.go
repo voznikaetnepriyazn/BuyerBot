@@ -1,8 +1,8 @@
 package main
 
 import (
+	"Order/internal/config"
 	"Order/internal/storage/postgresql"
-	"config"
 	"fmt"
 	"log/slog"
 	"os"
@@ -25,13 +25,11 @@ func main() {
 
 	log.Debug("debug messages are enabled")
 
-	storage, err := postgresql.New(cfg.StoragePath)
+	_, err := postgresql.New(cfg.StoragePath)
 	if err != nil {
 		log.Error("failed to init storage", slog.Any("error", err))
 		os.Exit(1)
 	}
-
-	storage.Connect()
 }
 
 func setUpLogger(env string) *slog.Logger { //конфигурация логгера

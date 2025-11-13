@@ -1,40 +1,26 @@
 package postgresql
 
 import (
-	"fmt"
 	"database/sql"
-	"log/slog"
-
-	"github.com/jackc/pgx/v5"
+	"fmt"
 )
 
-type Storage struct{
+type Storage struct {
 	db *sql.DB //connection string
 }
 
 func New(storagePath string) (*Storage, error) {
 	const op = "storage.postgresql.New"
 
-	slog.With(slog.String("op", op))
+	//slog.With(slog.String("op", op))
 
-	db, err := sql.Open("postgresql", storagePath)
-	if err != nil{
+	db, err := sql.Open("pgx", storagePath)
+	if err != nil {
 		return nil, fmt.Errorf("%s: %w", op, err)
 	}
 
-	stmt, err := db.Prepare(
-		CREATE TABLE IF NOT EXIST order(
-			id INTEGER PRIMARY KEY
-		);
-	CREATE INDEX IF NOT EXISTS index ON order(id);
-	)
-	if err != nil{
-		return nil, fmt.Errorf("%s: %w", op, err)
-	}
-
-	_, err = stmt.Exec()
-	if err != nil{
-		return nil, fmt.Errorf("%s: %w", op, err)
+	if err := db.Ping(); err != nil {
+		return nil, fmt.Errorf("%s: failed to ping db: %w", op, err)
 	}
 
 	return &Storage{db: db}, nil
@@ -43,114 +29,117 @@ func New(storagePath string) (*Storage, error) {
 func (s *Storage) addURL(urlToSave string, alias string) (int64, error) {
 	const op = "storage.postgresql.addURL"
 
-	stmt, err := s.db.Prepare("INSERT INTO dbo.Order (Id, IdOfClient, GoodsinOrder) VALUES ('{Guid.NewGuid}, {order.IdOfClient}, {order.GoodsinOrder}')")
-	if err != nil{
+	stmt, err := s.db.Prepare(
+		`INSERT INTO Order (Id, IdOfClient, GoodsinOrder) 
+		VALUES (NewGuid, IdOfClient, GoodsinOrder)`)
+	if err != nil {
 		return 0, fmt.Errorf("%s: %w", op, err)
 	}
+	defer stmt.Close()
 
-	res, err := stmt.Exec(urlToSave, alias)
-	if err != nil{
-		if postgresql, ok := err.(postgresql.Error); ok && postgresqlErr.ExtendedCode == postgresql.ErrConstraint {
-			return 0, fmt.Errorf("%s :%w", op, storage.ErrURLExists)
-		}
-
-		return 0, fmt.Errorf("%s: %w", op, err)
+	res, err := stmt.Exec(alias, "created")
+	if err != nil {
+		return 0, fmt.Errorf("%s: exec statement failed: %w", op, err)
 	}
 
 	id, err := res.LastInsertId()
-	if err != nil{
+	if err != nil {
 		return 0, fmt.Errorf("%s: failed to get last insert id: %w", op, err)
 	}
+
+	return id, nil
 }
 
-func (s *Storage) deleteURL(urlToSave string, alias string) (int64, error) {
-	const op = "storage.postgresql.addURL"
+func (s *Storage) deleteURL(urlToSave int64) error {
+	const op = "storage.postgresql.deleteURL"
 
-	stmt, err := s.db.Prepare("DELETE FROM dbo.Order WHERE id='{Id}'")
-	if err != nil{
-		return 0, fmt.Errorf("%s: %w", op, err)
+	stmt, err := s.db.Prepare(
+		`DELETE FROM Order WHERE id=Id`)
+	if err != nil {
+		return fmt.Errorf("%s: %w", op, err)
+	}
+	defer stmt.Close()
+
+	_, err = stmt.Exec(urlToSave)
+	if err != nil {
+		return fmt.Errorf("%s: %w", op, err)
 	}
 
-	res, err := stmt.Exec(urlToSave, alias)
-	if err != nil{
-		if postgresql, ok := err.(postgresql.Error); ok && postgresqlErr.ExtendedCode == postgresql.ErrConstraint {
-			return 0, fmt.Errorf("%s :%w", op, storage.ErrURLExists)
-		}
-
-		return 0, fmt.Errorf("%s: %w", op, err)
-	}
-
-	id, err := res.LastInsertId()
-	if err != nil{
-		return 0, fmt.Errorf("%s: failed to get last insert id: %w", op, err)
-	}
+	return nil
 }
 
-func (s *Storage) getAllURL(urlToSave string, alias string) (int64, error) {
-	const op = "storage.postgresql.addURL"
+func (s *Storage) getAllURL() ([]int64, error) {
+	const op = "storage.postgresql.getAllURL"
 
-	stmt, err := s.db.Prepare("SELECT Order.Id, Good.Id FROM dbo.Order INNER JOIN dbo.GoodInOrder ON Order.IdOfClient = GoodInOrder.IdOfClient INNER JOIN Good ON GoodInOrder.Id = Good.Id")
-	if err != nil{
-		return 0, fmt.Errorf("%s: %w", op, err)
+	stmt, err := s.db.Prepare(`
+		SELECT Order.Id
+		FROM Order 
+		INNER JOIN dbo.GoodInOrder ON Order.IdOfClient = GoodInOrder.IdOfClient 
+		INNER JOIN Good ON GoodInOrder.Id = Good.Id
+		`)
+	if err != nil {
+		return nil, fmt.Errorf("%s: %w", op, err)
 	}
+	defer stmt.Close()
 
-	res, err := stmt.Exec(urlToSave, alias)
-	if err != nil{
-		if postgresql, ok := err.(postgresql.Error); ok && postgresqlErr.ExtendedCode == postgresql.ErrConstraint {
-			return 0, fmt.Errorf("%s :%w", op, storage.ErrURLExists)
+	row, err := stmt.Query()
+	if err != nil {
+		return nil, fmt.Errorf("%s: %w", op, err)
+	}
+	defer stmt.Close()
+
+	var orders []int64
+	for row.Next() {
+		var order int64
+		err := row.Scan(&order)
+		if err != nil {
+			return nil, fmt.Errorf("%s: scann failed: %w", op, err)
 		}
-
-		return 0, fmt.Errorf("%s: %w", op, err)
+		orders = append(orders, order)
 	}
 
-	id, err := res.LastInsertId()
-	if err != nil{
-		return 0, fmt.Errorf("%s: failed to get last insert id: %w", op, err)
-	}
+	return orders, nil
 }
 
-func (s *Storage) getByIdURL(urlToSave string, alias string) (int64, error) {
-	const op = "storage.postgresql.addURL"
+func (s *Storage) getByIdURL(id int64) (int64, error) {
+	const op = "storage.postgresql.getByIdURL"
 
-	stmt, err := s.db.Prepare("SELECT * FROM dbo.Order WHERE id='{Id}'")
-	if err != nil{
+	stmt, err := s.db.Prepare(`
+	SELECT * FROM dbo.Order WHERE id=Id'
+	`)
+	if err != nil {
 		return 0, fmt.Errorf("%s: %w", op, err)
 	}
+	defer stmt.Close()
 
-	res, err := stmt.Exec(urlToSave, alias)
-	if err != nil{
-		if postgresql, ok := err.(postgresql.Error); ok && postgresqlErr.ExtendedCode == postgresql.ErrConstraint {
-			return 0, fmt.Errorf("%s :%w", op, storage.ErrURLExists)
+	var order int64
+	err = stmt.QueryRow(id).Scan(&order)
+	if err != nil {
+		if err == sql.ErrNoRows {
+			return 0, fmt.Errorf("%s: order not found", op)
 		}
-
 		return 0, fmt.Errorf("%s: %w", op, err)
 	}
 
-	id, err := res.LastInsertId()
-	if err != nil{
-		return 0, fmt.Errorf("%s: failed to get last insert id: %w", op, err)
-	}
+	return id, nil
 }
 
-func (s *Storage) updateURL(urlToSave string, alias string) (int64, error) {
-	const op = "storage.postgresql.addURL"
+func (s *Storage) updateURL(oldUrl string, urlToSave string, alias string) error {
+	const op = "storage.postgresql.updateURL"
 
-	stmt, err := s.db.Prepare("UPDATE dbo.Order SET IdOfClient='{order.IdOfClient}' WHERE Id='{order.Id}'")
-	if err != nil{
-		return 0, fmt.Errorf("%s: %w", op, err)
+	stmt, err := s.db.Prepare(`
+		UPDATE dbo.Order SET IdOfClient=order.IdOfClient 
+		WHERE Id=order.Id
+		`)
+	if err != nil {
+		return fmt.Errorf("%s: %w", op, err)
+	}
+	defer stmt.Close()
+
+	_, err = stmt.Exec(urlToSave, alias)
+	if err != nil {
+		return fmt.Errorf("%s: %w", op, err)
 	}
 
-	res, err := stmt.Exec(urlToSave, alias)
-	if err != nil{
-		if postgresql, ok := err.(postgresql.Error); ok && postgresqlErr.ExtendedCode == postgresql.ErrConstraint {
-			return 0, fmt.Errorf("%s :%w", op, storage.ErrURLExists)
-		}
-
-		return 0, fmt.Errorf("%s: %w", op, err)
-	}
-
-	id, err := res.LastInsertId()
-	if err != nil{
-		return 0, fmt.Errorf("%s: failed to get last insert id: %w", op, err)
-	}
+	return nil
 }

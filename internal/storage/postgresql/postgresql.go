@@ -31,7 +31,8 @@ func (s *Storage) addURL(urlToSave string, alias string) (int64, error) {
 
 	stmt, err := s.db.Prepare(
 		`INSERT INTO Order (Id, IdOfClient, GoodsinOrder) 
-		VALUES (NewGuid, IdOfClient, GoodsinOrder)`)
+		VALUES (NewGuid, IdOfClient, GoodsinOrder)
+		`)
 	if err != nil {
 		return 0, fmt.Errorf("%s: %w", op, err)
 	}

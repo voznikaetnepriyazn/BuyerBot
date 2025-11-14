@@ -6,6 +6,9 @@ import (
 	"fmt"
 	"log/slog"
 	"os"
+
+	"github.com/go-chi/chi/middleware"
+	"github.com/go-chi/chi/v5"
 )
 
 const (
@@ -30,6 +33,12 @@ func main() {
 		log.Error("failed to init storage", slog.Any("error", err))
 		os.Exit(1)
 	}
+
+	router := chi.NewRouter
+
+	router.Use(middleware.RequestID)
+	router.Use(middleware.RealIP)
+	router.Use(middleware.Logger)
 }
 
 func setUpLogger(env string) *slog.Logger { //конфигурация логгера

@@ -39,12 +39,13 @@ func main() {
 
 	router.Use(middleware.RequestID())
 	router.Use(logger.New(log))
+	router.Use(middleware.Recoverer())
 
-	router.GET("/ping", func(c *gin.Context) {
+	/*router.GET("/ping", func(c *gin.Context) {
 		c.JSON(200, gin.H{"message": "pong"})
 	})
 
-	router.Run(":8080")
+	*/router.Run(":8080")
 }
 
 func setUpLogger(env string) *slog.Logger { //конфигурация логгера

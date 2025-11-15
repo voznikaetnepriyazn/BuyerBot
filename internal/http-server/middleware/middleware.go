@@ -3,9 +3,9 @@ package middleware
 import (
 	"context"
 	"fmt"
-	"log"
 	"log/slog"
 	"net/http"
+	"runtime"
 	"time"
 
 	"github.com/gin-gonic/gin"
@@ -20,16 +20,25 @@ func RequestID() gin.HandlerFunc {
 	}
 }
 
-func Recoverer() gin.HandlerFunc {
+func Recoverer(log *slog.Logger) gin.HandlerFunc {
 	return func(c *gin.Context) {
 		defer func() {
 			if err := recover(); err != nil {
-				log.Error("panic recovered", slog.Any("error", err))
-			}
+				stackBuf := make([]byte, 4096)
+				stackSize := runtime.Stack(stackBuf, false)
+				stackTrace := string(stackBuf[:stackSize])
 
-			c.JSON(http.StatusInternalServerError, gin.H{
-				"error": "internal server error",
-			})
+				log.Error("panic recovered",
+					slog.Any("error", err),
+					slog.String("stack_trace", stackTrace),
+					slog.String("method", c.Request.Method),
+					slog.String("path", c.Request.URL.Path),
+				)
+
+				c.JSON(http.StatusInternalServerError, gin.H{
+					"error": "internal server error",
+				})
+			}
 
 			c.Abort()
 		}()

@@ -39,7 +39,7 @@ func main() {
 
 	router.Use(middleware.RequestID())
 	router.Use(logger.New(log))
-	router.Use(middleware.Recoverer())
+	router.Use(middleware.Recoverer(log))
 
 	/*router.GET("/ping", func(c *gin.Context) {
 		c.JSON(200, gin.H{"message": "pong"})

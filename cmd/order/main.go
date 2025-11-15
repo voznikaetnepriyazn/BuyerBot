@@ -2,13 +2,14 @@ package main
 
 import (
 	"Order/internal/config"
+	"Order/internal/http-server/middleware"
+	"Order/internal/http-server/middleware/logger"
 	"Order/internal/storage/postgresql"
 	"fmt"
 	"log/slog"
 	"os"
 
-	"github.com/go-chi/chi/middleware"
-	"github.com/go-chi/chi/v5"
+	"github.com/gin-gonic/gin"
 )
 
 const (
@@ -34,11 +35,16 @@ func main() {
 		os.Exit(1)
 	}
 
-	router := chi.NewRouter
+	router := gin.Default()
 
-	router.Use(middleware.RequestID)
-	router.Use(middleware.RealIP)
-	router.Use(middleware.Logger)
+	router.Use(middleware.RequestID())
+	router.Use(logger.New(log))
+
+	router.GET("/ping", func(c *gin.Context) {
+		c.JSON(200, gin.H{"message": "pong"})
+	})
+
+	router.Run(":8080")
 }
 
 func setUpLogger(env string) *slog.Logger { //конфигурация логгера

@@ -7,6 +7,20 @@ import (
 
 type Storage struct {
 	db *sql.DB //connection string
+
+	storage StorageInter
+}
+
+type StorageInter interface {
+	AddURL(urlToSave string, alias string) (int64, error)
+
+	DeleteURL(urlToSave int64) error
+
+	GetAllURL() ([]int64, error)
+
+	GetByIdURL(id int64) (int64, error)
+
+	UpdateURL(oldUrl string, urlToSave string, alias string) error
 }
 
 func New(storagePath string) (*Storage, error) {
@@ -26,7 +40,7 @@ func New(storagePath string) (*Storage, error) {
 	return &Storage{db: db}, nil
 }
 
-func (s *Storage) addURL(urlToSave string, alias string) (int64, error) {
+func (s *Storage) AddURL(urlToSave string, alias string) (int64, error) {
 	const op = "storage.postgresql.addURL"
 
 	stmt, err := s.db.Prepare(
@@ -51,7 +65,7 @@ func (s *Storage) addURL(urlToSave string, alias string) (int64, error) {
 	return id, nil
 }
 
-func (s *Storage) deleteURL(urlToSave int64) error {
+func (s *Storage) DeleteURL(urlToSave int64) error {
 	const op = "storage.postgresql.deleteURL"
 
 	stmt, err := s.db.Prepare(
@@ -69,7 +83,7 @@ func (s *Storage) deleteURL(urlToSave int64) error {
 	return nil
 }
 
-func (s *Storage) getAllURL() ([]int64, error) {
+func (s *Storage) GetAllURL() ([]int64, error) {
 	const op = "storage.postgresql.getAllURL"
 
 	stmt, err := s.db.Prepare(`
@@ -102,7 +116,7 @@ func (s *Storage) getAllURL() ([]int64, error) {
 	return orders, nil
 }
 
-func (s *Storage) getByIdURL(id int64) (int64, error) {
+func (s *Storage) GetByIdURL(id int64) (int64, error) {
 	const op = "storage.postgresql.getByIdURL"
 
 	stmt, err := s.db.Prepare(`
@@ -125,7 +139,7 @@ func (s *Storage) getByIdURL(id int64) (int64, error) {
 	return id, nil
 }
 
-func (s *Storage) updateURL(oldUrl string, urlToSave string, alias string) error {
+func (s *Storage) UpdateURL(oldUrl string, urlToSave string, alias string) error {
 	const op = "storage.postgresql.updateURL"
 
 	stmt, err := s.db.Prepare(`

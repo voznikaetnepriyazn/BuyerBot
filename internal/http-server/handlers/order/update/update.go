@@ -3,6 +3,8 @@ package update
 import (
 	"log/slog"
 
+	resp "Order/internal/lib/api/response"
+
 	"github.com/gin-gonic/gin"
 )
 
@@ -12,14 +14,16 @@ type Response struct {
 }
 
 type Request struct {
-	//resp.Response
+	resp.Response
 	Alias string
 }
 
-type UpdateURL interface {
+type UpdaterURL interface {
 	UpdateURL(oldUrl string, urlToSave string, alias string) error
 }
 
-func New(log *slog.Logger) gin.HandlerFunc {
-	return func(c *gin.Context)
+func New(log *slog.Logger, update UpdaterURL) gin.HandlerFunc {
+	return func(c *gin.Context) {
+		const op = ""
+	}
 }

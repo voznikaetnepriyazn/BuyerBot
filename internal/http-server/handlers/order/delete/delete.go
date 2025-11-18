@@ -3,6 +3,8 @@ package delete
 import (
 	"log/slog"
 
+	resp "Order/internal/lib/api/response"
+
 	"github.com/gin-gonic/gin"
 )
 
@@ -12,14 +14,16 @@ type Response struct {
 }
 
 type Request struct {
-	//resp.Response
+	resp.Response
 	Alias string
 }
 
-type DeleteURL interface {
+type DeleterURL interface {
 	DeleteURL(urlToSave int64) error
 }
 
-func New(log *slog.Logger) gin.HandlerFunc {
-	return func(c *gin.Context)
+func New(log *slog.Logger, deleter DeleterURL) gin.HandlerFunc {
+	return func(c *gin.Context) {
+		const op = ""
+	}
 }

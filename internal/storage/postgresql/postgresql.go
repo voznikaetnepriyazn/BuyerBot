@@ -7,11 +7,9 @@ import (
 
 type Storage struct {
 	db *sql.DB //connection string
-
-	storage StorageInter
 }
 
-type StorageInter interface {
+/*type StorageInter interface {
 	AddURL(urlToSave string, alias string) (int64, error)
 
 	DeleteURL(urlToSave int64) error
@@ -21,7 +19,7 @@ type StorageInter interface {
 	GetByIdURL(id int64) (int64, error)
 
 	UpdateURL(oldUrl string, urlToSave string, alias string) error
-}
+}*/
 
 func New(storagePath string) (*Storage, error) {
 	const op = "storage.postgresql.New"

@@ -1,4 +1,4 @@
-package add
+package delete
 
 import (
 	"log/slog"
@@ -16,8 +16,8 @@ type Request struct {
 	Alias string
 }
 
-type AddURL interface {
-	AddURL(urlToSave string, alias string) (int64, error)
+type DeleteURL interface {
+	DeleteURL(urlToSave int64) error
 }
 
 func New(log *slog.Logger) gin.HandlerFunc {

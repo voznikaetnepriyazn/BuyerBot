@@ -1,4 +1,4 @@
-package add
+package getbyid
 
 import (
 	"log/slog"
@@ -16,8 +16,8 @@ type Request struct {
 	Alias string
 }
 
-type AddURL interface {
-	AddURL(urlToSave string, alias string) (int64, error)
+type GetByIdURL interface {
+	GetByIdURL(id int64) (int64, error)
 }
 
 func New(log *slog.Logger) gin.HandlerFunc {

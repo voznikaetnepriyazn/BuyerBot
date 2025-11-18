@@ -1,5 +1,7 @@
 package main
 
+//TODO: add interface dependencies. подгрузить скуль драйвер
+
 import (
 	"Order/internal/config"
 	"Order/internal/http-server/middleware"

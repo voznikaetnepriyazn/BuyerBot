@@ -3,8 +3,8 @@ package add
 import (
 	"errors"
 	"log/slog"
-	"net/http"
 
+	"Order/internal/http-server/middleware"
 	resp "Order/internal/lib/api/response"
 	"Order/internal/lib/logger/sl"
 	"Order/internal/lib/random"
@@ -16,12 +16,13 @@ import (
 
 type Response struct {
 	URL   string `json:"url" validate:"required, url"`
-	Alias string `json: "alias, omitempty"`
+	Alias string `json:"alias,omitempty" binding:"omitempty"`
 }
 
 type Request struct {
 	resp.Response
-	Alias string `json: "alias, omitempty"`
+	URL   string `json:"url" binding:"required"`
+	Alias string `json:"alias,omitempty" binding:"omitempty"`
 }
 
 const aliasLenght = 10 //may move to config
@@ -36,16 +37,17 @@ func New(log *slog.Logger, adder AdderURL) gin.HandlerFunc {
 
 		log = log.With(
 			slog.String("op", op),
-			slog.String("request_id", middleware.GetReqId(r.Context())),
+			slog.String("request_id", middleware.GetReqID(c.Request.Context())),
 		)
 
 		var req Request
 
-		err := render.DecodeJSON(r.Body, &req)
-		if err != nil {
+		if err := c.ShouldBindJSON(&req); err != nil {
 			log.Error("failed to decode request body", sl.Err(err))
 
-			render.JSON(w, r, resp.Error("failed to decode request"))
+			c.JSON(400, gin.H{
+				"error": "failed to decode request",
+			})
 
 			return
 		}
@@ -57,7 +59,10 @@ func New(log *slog.Logger, adder AdderURL) gin.HandlerFunc {
 
 			log.Error("invalid request", sl.Err(err))
 
-			render.JSON(w, r, resp.ValidationError(validateErr))
+			c.JSON(400, gin.H{
+				"error":   "validation failed",
+				"details": formatValidationError(validateErr),
+			})
 
 			return
 		}
@@ -71,27 +76,40 @@ func New(log *slog.Logger, adder AdderURL) gin.HandlerFunc {
 		if errors.Is(err, storage.ErrUrlExist) {
 			log.Info("url already exists", slog.String("url", req.URL))
 
-			render.JSON(w, r, resp.Error("url already exists"))
+			c.JSON(400, gin.H{
+				"error": "url already exists",
+			})
 
 			return
 		}
+
 		if err != nil {
 			log.Error("failed to add url", sl.Err(err))
 
-			render.JSON(w, r, resp.Error("failed to add url"))
+			c.JSON(500, gin.H{
+				"error": "failed to add url",
+			})
 
 			return
 		}
 
 		log.Info("url added", slog.Int64("id", id))
 
-		responseOK(w, r, alias)
+		responseOK(c, alias)
 	}
 }
 
-func responseOK(w http.ResponseWriter, r *http.Request, alias string) {
-	render.JSON(w, r, Response{
-		Response: resp.OK(),
-		Alias:    alias,
+func responseOK(c *gin.Context, alias string) {
+	c.JSON(200, gin.H{
+		"status": "OK",
+		"alias":  alias,
 	})
+}
+
+func formatValidationError(err validator.ValidationErrors) map[string]string {
+	errors := make(map[string]string)
+	for _, e := range err {
+		errors[e.Field()] = e.Error()
+	}
+	return errors
 }

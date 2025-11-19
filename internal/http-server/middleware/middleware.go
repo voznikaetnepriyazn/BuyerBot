@@ -46,3 +46,15 @@ func Recoverer(log *slog.Logger) gin.HandlerFunc {
 		c.Next()
 	}
 }
+
+func GetReqID(ctx context.Context) string {
+	if ctx == nil {
+		return ""
+	}
+
+	if reqID, ok := ctx.Value("requestID").(string); ok {
+		return reqID
+	}
+
+	return ""
+}

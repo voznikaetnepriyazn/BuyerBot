@@ -63,7 +63,7 @@ func (s *Storage) AddURL(urlToSave string, alias string) (int64, error) {
 	return id, nil
 }
 
-func (s *Storage) DeleteURL(urlToSave int64) error {
+func (s *Storage) DeleteURL(urlToSave string) error {
 	const op = "storage.postgresql.deleteURL"
 
 	stmt, err := s.db.Prepare(
@@ -81,7 +81,7 @@ func (s *Storage) DeleteURL(urlToSave int64) error {
 	return nil
 }
 
-func (s *Storage) GetAllURL() ([]int64, error) {
+func (s *Storage) GetAllURL() ([]string, error) {
 	const op = "storage.postgresql.getAllURL"
 
 	stmt, err := s.db.Prepare(`
@@ -101,9 +101,9 @@ func (s *Storage) GetAllURL() ([]int64, error) {
 	}
 	defer stmt.Close()
 
-	var orders []int64
+	var orders []string
 	for row.Next() {
-		var order int64
+		var order string
 		err := row.Scan(&order)
 		if err != nil {
 			return nil, fmt.Errorf("%s: scann failed: %w", op, err)
@@ -114,14 +114,14 @@ func (s *Storage) GetAllURL() ([]int64, error) {
 	return orders, nil
 }
 
-func (s *Storage) GetByIdURL(id int64) (int64, error) {
+func (s *Storage) GetByIdURL(id string) (string, error) {
 	const op = "storage.postgresql.getByIdURL"
 
 	stmt, err := s.db.Prepare(`
 	SELECT * FROM dbo.Order WHERE id=Id'
 	`)
 	if err != nil {
-		return 0, fmt.Errorf("%s: %w", op, err)
+		return "", fmt.Errorf("%s: %w", op, err)
 	}
 	defer stmt.Close()
 
@@ -129,9 +129,9 @@ func (s *Storage) GetByIdURL(id int64) (int64, error) {
 	err = stmt.QueryRow(id).Scan(&order)
 	if err != nil {
 		if err == sql.ErrNoRows {
-			return 0, fmt.Errorf("%s: order not found", op)
+			return "", fmt.Errorf("%s: order not found", op)
 		}
-		return 0, fmt.Errorf("%s: %w", op, err)
+		return "", fmt.Errorf("%s: %w", op, err)
 	}
 
 	return id, nil

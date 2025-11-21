@@ -58,3 +58,21 @@ func GetReqID(ctx context.Context) string {
 
 	return ""
 }
+
+func GetReqIDSlice(ctxs []context.Context) []string {
+	var id []string
+
+	for _, ctx := range ctxs {
+		if ctx == nil {
+			id = append(id, "")
+			continue
+		}
+
+		if reqID, ok := ctx.Value("requestID").(string); ok {
+			id = append(id, reqID)
+		}
+		id = append(id, "")
+	}
+
+	return id
+}

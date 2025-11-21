@@ -66,7 +66,7 @@ func main() {
 	}
 }
 
-func registerHandlers(router *gin.Engine, log *slog.Logger, service *service.urlService) {
+func registerHandlers(router *gin.Engine, log *slog.Logger, urlService *services.OrderStruct) {
 	router.POST("url/add", add.New(log, service))
 
 	router.GET("url/getById", getall.New(log, service))

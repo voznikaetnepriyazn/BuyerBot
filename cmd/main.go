@@ -1,11 +1,18 @@
 package main
 
-//TODO: add interface dependencies. подгрузить скуль драйвер
+//TODO: add interface dependencies. подгрузить скуль драйвер, уникальный тип данных для ид
 
 import (
 	"Order/internal/config"
+	"Order/internal/http-server/handlers/order/add"
+	"Order/internal/http-server/handlers/order/delete"
+	getall "Order/internal/http-server/handlers/order/getAll"
+	getbyid "Order/internal/http-server/handlers/order/getById"
+	isordercreated "Order/internal/http-server/handlers/order/isOrderCreated"
+	"Order/internal/http-server/handlers/order/update"
 	"Order/internal/http-server/middleware"
 	"Order/internal/http-server/middleware/logger"
+	services "Order/internal/services/order-service"
 	"Order/internal/storage/postgresql"
 	"fmt"
 	"log/slog"
@@ -31,11 +38,13 @@ func main() {
 
 	log.Debug("debug messages are enabled")
 
-	_, err := postgresql.New(cfg.StoragePath)
+	dbStorage, err := postgresql.New(cfg.StoragePath)
 	if err != nil {
 		log.Error("failed to init storage", slog.Any("error", err))
 		os.Exit(1)
 	}
+
+	urlService := services.NewService(dbStorage)
 
 	router := gin.Default()
 
@@ -43,11 +52,32 @@ func main() {
 	router.Use(logger.New(log))
 	router.Use(middleware.Recoverer(log))
 
-	/*router.GET("/ping", func(c *gin.Context) {
-		c.JSON(200, gin.H{"message": "pong"})
-	})
+	registerHandlers(router, log, urlService)
 
-	*/router.Run(":8080")
+	addr := cfg.HttpServer.Address
+	if addr == "" {
+		addr = ":8080"
+	}
+
+	log.Info("starting server", slog.String("address", addr))
+	if err := router.Run(addr); err != nil {
+		log.Error("failed to start server", slog.Any("error", err))
+		os.Exit(1)
+	}
+}
+
+func registerHandlers(router *gin.Engine, log *slog.Logger, service *service.urlService) {
+	router.POST("url/add", add.New(log, service))
+
+	router.GET("url/getById", getall.New(log, service))
+
+	router.GET("url/getAll", getbyid.New(log, service))
+
+	router.PUT("url/update", update.New(log, service))
+
+	router.DELETE("url/delete", isordercreated.New(log, service))
+
+	router.GET("url/isOrderCreated", delete.New(log, service))
 }
 
 func setUpLogger(env string) *slog.Logger { //конфигурация логгера

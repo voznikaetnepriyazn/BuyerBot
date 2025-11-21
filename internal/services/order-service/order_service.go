@@ -8,16 +8,22 @@ type OrderStruct struct {
 	storage storage.StorageInter
 }
 type OrderService interface {
-	IsOrderCreated(id int) bool
+	IsOrderCreated(id string) bool
 }
 
-func (o *OrderStruct) IsOrderCreated(id int64) (bool, error) {
+func NewService(storage storage.StorageInter) *OrderStruct {
+	return &OrderStruct{
+		storage: storage,
+	}
+}
+
+func (o *OrderStruct) IsOrderCreated(id string) (bool, error) {
 	order, err := o.storage.GetByIdURL(id)
 	if err != nil {
 		return false, err
 	}
 
-	if order == 0 {
+	if order == "" {
 		return false, err
 	}
 

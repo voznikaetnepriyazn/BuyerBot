@@ -10,11 +10,11 @@ var (
 type StorageInter interface {
 	AddURL(urlToSave string, alias string) (int64, error)
 
-	DeleteURL(urlToSave int64) error
+	DeleteURL(urlToSave string) error
 
-	GetAllURL() ([]int64, error)
+	GetAllURL() ([]string, error)
 
-	GetByIdURL(id int64) (int64, error)
+	GetByIdURL(id string) (string, error)
 
 	UpdateURL(oldUrl string, urlToSave string, alias string) error
 }

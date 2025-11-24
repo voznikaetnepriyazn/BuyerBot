@@ -1,6 +1,7 @@
 package postgresql
 
 import (
+	"Order/internal/storage"
 	"database/sql"
 	"fmt"
 )
@@ -142,3 +143,18 @@ func (s *Storage) UpdateURL(oldUrl string, urlToSave string, alias string) error
 
 	return nil
 }
+
+func (s *Storage) IsOrderCreated(id string) (bool, error) {
+	order, err := s.GetByIdURL(id)
+	if err != nil {
+		return false, err
+	}
+
+	if order == "" {
+		return false, err
+	}
+
+	return true, nil
+}
+
+var _ storage.OrderService = (*Storage)(nil)

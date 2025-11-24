@@ -1,18 +1,15 @@
 package main
 
-//TODO: add interface dependencies. подгрузить скуль драйвер, уникальный тип данных для ид
+//TODO: подгрузить скуль драйвер, уникальный тип данных для ид
 
 import (
 	"Order/internal/config"
-	"Order/internal/http-server/handlers/order/add"
-	"Order/internal/http-server/handlers/order/delete"
-	getall "Order/internal/http-server/handlers/order/getAll"
-	getbyid "Order/internal/http-server/handlers/order/getById"
-	isordercreated "Order/internal/http-server/handlers/order/isOrderCreated"
-	"Order/internal/http-server/handlers/order/update"
+	handlers "Order/internal/http-server/handlers/order"
 	"Order/internal/http-server/middleware"
 	"Order/internal/http-server/middleware/logger"
-	services "Order/internal/services/order-service"
+
+	//services "Order/internal/services/order-service"
+	"Order/internal/storage"
 	"Order/internal/storage/postgresql"
 	"fmt"
 	"log/slog"
@@ -44,7 +41,7 @@ func main() {
 		os.Exit(1)
 	}
 
-	urlService := services.NewService(dbStorage)
+	urlService := storage.OrderService(dbStorage)
 
 	router := gin.Default()
 
@@ -66,18 +63,18 @@ func main() {
 	}
 }
 
-func registerHandlers(router *gin.Engine, log *slog.Logger, urlService *services.OrderStruct) {
-	router.POST("url/add", add.New(log, service))
+func registerHandlers(router *gin.Engine, log *slog.Logger, service storage.OrderService) {
+	router.POST("url/add", handlers.NewAdd(log, service))
 
-	router.GET("url/getById", getall.New(log, service))
+	router.GET("url/getById", handlers.NewGetById(log, service))
 
-	router.GET("url/getAll", getbyid.New(log, service))
+	router.GET("url/getAll", handlers.NewGetAll(log, service))
 
-	router.PUT("url/update", update.New(log, service))
+	router.PUT("url/update", handlers.NewUpdate(log, service))
 
-	router.DELETE("url/delete", isordercreated.New(log, service))
+	router.DELETE("url/delete", handlers.NewDelete(log, service))
 
-	router.GET("url/isOrderCreated", delete.New(log, service))
+	router.GET("url/isOrderCreated", handlers.NewIsOrderCreated(log, service))
 }
 
 func setUpLogger(env string) *slog.Logger { //конфигурация логгера

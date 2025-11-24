@@ -7,7 +7,7 @@ var (
 	ErrUrlExist    = errors.New("url exist")
 )
 
-type StorageInter interface {
+type OrderService interface {
 	AddURL(urlToSave string, alias string) (int64, error)
 
 	DeleteURL(urlToSave string) error
@@ -17,4 +17,6 @@ type StorageInter interface {
 	GetByIdURL(id string) (string, error)
 
 	UpdateURL(oldUrl string, urlToSave string, alias string) error
+
+	IsOrderCreated(id string) (bool, error)
 }

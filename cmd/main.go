@@ -31,7 +31,7 @@ func main() {
 
 	log := setUpLogger(cfg.Env)
 
-	log.Info("starting url-shortener", slog.String("env", cfg.Env))
+	log.Info("starting order servise", slog.String("env", cfg.Env))
 
 	log.Debug("debug messages are enabled")
 

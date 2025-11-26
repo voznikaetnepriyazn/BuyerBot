@@ -16,7 +16,7 @@ type OrderService interface {
 
 	GetByIdURL(id string) (string, error)
 
-	UpdateURL(oldUrl string, urlToSave string, alias string) error
+	UpdateURL(oldUrl string, urlToSave string) error
 
-	IsOrderCreated(id string) (bool, error)
+	IsOrderCreatedURL(id string) (bool, error)
 }

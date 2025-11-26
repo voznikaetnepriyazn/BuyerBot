@@ -22,7 +22,7 @@ type Response struct {
 
 type Request struct {
 	resp.Response
-	URL   string `json:"url" binding:"required"`
+	URL   string `json:"url" validate:"required, url"`
 	Alias string `json:"alias,omitempty" binding:"omitempty"`
 }
 
@@ -75,7 +75,7 @@ func NewAdd(log *slog.Logger, adder storage.OrderService) gin.HandlerFunc {
 
 		alias := req.Alias
 		if alias == "" {
-			alias = random.NewRandomString(aliasLenght) //what if have generated same alias???
+			alias = random.NewRandomString(aliasLenght)
 		}
 
 		id, err := adder.AddURL(req.URL, alias)
@@ -312,12 +312,156 @@ func NewGetById(log *slog.Logger, get storage.OrderService) gin.HandlerFunc {
 
 func NewUpdate(log *slog.Logger, update storage.OrderService) gin.HandlerFunc {
 	return func(c *gin.Context) {
-		const op = ""
+		const op = "handlers.url.update.New"
+
+		log = log.With(
+			slog.String("op", op),
+			slog.Any("request_id", middleware.GetReqID(c.Request.Context())),
+		)
+
+		oldId := c.Param("id")
+		if oldId == "" {
+			log.Info("old id is empty")
+
+			c.JSON(400, gin.H{
+				"error": "invalid request",
+			})
+			return
+		}
+
+		newId := c.Param("id")
+		if newId == "" {
+			log.Info("new id is empty")
+
+			c.JSON(400, gin.H{
+				"error": "invalid request",
+			})
+			return
+		}
+
+		var req Request
+
+		if err := c.ShouldBindJSON(&req); err != nil {
+			log.Error("failed to decode request body", sl.Err(err))
+
+			c.JSON(400, gin.H{
+				"error": "failed to decode request",
+			})
+
+			return
+		}
+
+		log.Info("request body decoded", slog.Any("request", req))
+
+		if err := validator.New().Struct(req); err != nil {
+			validateErr := err.(validator.ValidationErrors)
+
+			log.Error("invalid request", sl.Err(err))
+
+			c.JSON(400, gin.H{
+				"error":   "validation failed",
+				"details": formatValidationError(validateErr),
+			})
+
+			return
+		}
+
+		err := update.UpdateURL(oldId, newId)
+		if errors.Is(err, storage.ErrUrlNotFound) {
+			log.Info("url not found", "id", oldId)
+
+			c.JSON(404, gin.H{
+				"error": "not found",
+			})
+
+			return
+		}
+
+		if err != nil {
+			log.Error("failed to get url", sl.Err(err))
+
+			c.JSON(500, gin.H{
+				"error": "internal error",
+			})
+
+			return
+		}
+
+		log.Info("updated url", slog.String("url", newId))
+
+		responseOK(c, newId)
 	}
 }
 
 func NewIsOrderCreated(log *slog.Logger, ord storage.OrderService) gin.HandlerFunc {
 	return func(c *gin.Context) {
-		const op = ""
+		const op = "handlers.url.IsOrderCreated.New"
+
+		log = log.With(
+			slog.String("op", op),
+			slog.Any("request_id", middleware.GetReqID(c.Request.Context())),
+		)
+
+		id := c.Param("id")
+		if id == "" {
+			log.Info("id is empty")
+
+			c.JSON(400, gin.H{
+				"error": "invalid request",
+			})
+			return
+		}
+
+		var req Request
+
+		if err := c.ShouldBindJSON(&req); err != nil {
+			log.Error("failed to decode request body", sl.Err(err))
+
+			c.JSON(400, gin.H{
+				"error": "failed to decode request",
+			})
+
+			return
+		}
+
+		log.Info("request body decoded", slog.Any("request", req))
+
+		if err := validator.New().Struct(req); err != nil {
+			validateErr := err.(validator.ValidationErrors)
+
+			log.Error("invalid request", sl.Err(err))
+
+			c.JSON(400, gin.H{
+				"error":   "validation failed",
+				"details": formatValidationError(validateErr),
+			})
+
+			return
+		}
+
+		resId, err := ord.IsOrderCreatedURL(id)
+		if resId == false {
+			log.Info("url not found", "id", resId)
+
+			c.JSON(404, gin.H{
+				"error": "not found",
+			})
+
+			return
+		}
+
+		if err != nil {
+			log.Error("failed to check url", sl.Err(err))
+
+			c.JSON(500, gin.H{
+				"error": "internal error",
+			})
+
+			return
+		}
+
+		log.Info("url exist", slog.String("url", id))
+
+		responseOK(c, id)
 	}
 }

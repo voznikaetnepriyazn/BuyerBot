@@ -124,7 +124,7 @@ func (s *Storage) GetByIdURL(id string) (string, error) {
 	return id, nil
 }
 
-func (s *Storage) UpdateURL(oldUrl string, urlToSave string, alias string) error {
+func (s *Storage) UpdateURL(oldUrl string, urlToSave string) error {
 	const op = "storage.postgresql.updateURL"
 
 	stmt, err := s.db.Prepare(`
@@ -136,7 +136,7 @@ func (s *Storage) UpdateURL(oldUrl string, urlToSave string, alias string) error
 	}
 	defer stmt.Close()
 
-	_, err = stmt.Exec(urlToSave, alias)
+	_, err = stmt.Exec(urlToSave)
 	if err != nil {
 		return fmt.Errorf("%s: %w", op, err)
 	}
@@ -144,7 +144,7 @@ func (s *Storage) UpdateURL(oldUrl string, urlToSave string, alias string) error
 	return nil
 }
 
-func (s *Storage) IsOrderCreated(id string) (bool, error) {
+func (s *Storage) IsOrderCreatedURL(id string) (bool, error) {
 	order, err := s.GetByIdURL(id)
 	if err != nil {
 		return false, err

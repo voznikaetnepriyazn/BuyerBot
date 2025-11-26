@@ -70,11 +70,11 @@ func registerHandlers(router *gin.Engine, log *slog.Logger, service storage.Orde
 
 	router.GET("url/getAll", handlers.NewGetAll(log, service))
 
-	router.PUT("url/update", handlers.NewUpdate(log, service))
+	router.PUT("url/update/:oldId/:newId", handlers.NewUpdate(log, service))
 
 	router.DELETE("url/delete", handlers.NewDelete(log, service))
 
-	router.GET("url/isOrderCreated", handlers.NewIsOrderCreated(log, service))
+	router.POST("url/isOrderCreated", handlers.NewIsOrderCreated(log, service))
 }
 
 func setUpLogger(env string) *slog.Logger { //конфигурация логгера

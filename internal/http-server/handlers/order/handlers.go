@@ -146,6 +146,8 @@ func NewDelete(log *slog.Logger, deleter storage.OrderService) gin.HandlerFunc {
 			c.JSON(400, gin.H{
 				"error": "not found",
 			})
+
+			return
 		}
 
 		if err != nil {
@@ -217,6 +219,8 @@ func NewGetAll(log *slog.Logger, get storage.OrderService) gin.HandlerFunc {
 			c.JSON(400, gin.H{
 				"error": "not found",
 			})
+
+			return
 		}
 
 		if err != nil {
@@ -290,6 +294,8 @@ func NewGetById(log *slog.Logger, get storage.OrderService) gin.HandlerFunc {
 			c.JSON(400, gin.H{
 				"error": "not found",
 			})
+
+			return
 		}
 
 		if err != nil {

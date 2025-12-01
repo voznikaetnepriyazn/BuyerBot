@@ -1,6 +1,6 @@
 package main
 
-//TODO: подгрузить скуль драйвер, уникальный тип данных для ид
+//TODO: уникальный тип данных для ид
 
 import (
 	"Order/internal/config"
@@ -16,6 +16,7 @@ import (
 	"os"
 
 	"github.com/gin-gonic/gin"
+	_ "github.com/jackc/pgx/v5/stdlib"
 )
 
 const (

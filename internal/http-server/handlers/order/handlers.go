@@ -41,6 +41,7 @@ func NewAdd(log *slog.Logger, adder storage.OrderService) gin.HandlerFunc {
 	return func(c *gin.Context) {
 		const op = "handlers.url.add.New"
 
+		//добавить ид запроса в лог
 		log = log.With(
 			slog.String("op", op),
 			slog.String("request_id", middleware.GetReqID(c.Request.Context())),
@@ -48,6 +49,7 @@ func NewAdd(log *slog.Logger, adder storage.OrderService) gin.HandlerFunc {
 
 		var req Request
 
+		//декодирование из джэйсона в стркктуру данных
 		if err := c.ShouldBindJSON(&req); err != nil {
 			log.Error("failed to decode request body", sl.Err(err))
 
@@ -60,6 +62,7 @@ func NewAdd(log *slog.Logger, adder storage.OrderService) gin.HandlerFunc {
 
 		log.Info("request body decoded", slog.Any("request", req))
 
+		//валидация - просто проверка на то, есть ли значение(в данном случае)
 		if err := validator.New().Struct(req); err != nil {
 			validateErr := err.(validator.ValidationErrors)
 
@@ -78,6 +81,7 @@ func NewAdd(log *slog.Logger, adder storage.OrderService) gin.HandlerFunc {
 			alias = random.NewRandomString(aliasLenght)
 		}
 
+		//проверка на уже существующее значение
 		id, err := adder.AddURL(req.URL, alias)
 		if errors.Is(err, storage.ErrUrlExist) {
 			log.Info("url already exists", slog.String("url", req.URL))
@@ -89,6 +93,7 @@ func NewAdd(log *slog.Logger, adder storage.OrderService) gin.HandlerFunc {
 			return
 		}
 
+		//прочие ошибки
 		if err != nil {
 			log.Error("failed to add url", sl.Err(err))
 

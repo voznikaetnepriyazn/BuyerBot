@@ -1,7 +1,6 @@
 package handlers
 
 import (
-	"context"
 	"errors"
 	"log/slog"
 
@@ -177,7 +176,7 @@ func NewGetAll(log *slog.Logger, get storage.OrderService) gin.HandlerFunc {
 
 		log = log.With(
 			slog.String("op", op),
-			slog.Any("request_id", middleware.GetReqIDSlice([]context.Context{c.Request.Context()})),
+			slog.Any("request_id", middleware.GetReqID(c.Request.Context())),
 		)
 
 		var req Request

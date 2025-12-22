@@ -5,12 +5,6 @@ service GetOrderInfo {
     rpc GetOrderRequest(stream Order) returns (Order);
 }
 
-
-service Conversation {
-    rpc OrderResponse(Customer) returns (stream Order);
-    rpc OrderResponse(Good) returns (stream Order);
-}
-
 message Order {
     string id = 1;
     string idOfCustomer = 2;

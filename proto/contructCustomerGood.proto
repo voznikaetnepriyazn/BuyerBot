@@ -1,25 +1,10 @@
 syntax = "proto3";
 
-service GetOrderInfo {
-    rpc GetOrderResponse(Order) returns (stream Order);
-    rpc GetOrderRequest(stream Order) returns (Order);
-}
-
 service GetCustomerGoodInfo {
     rpc GetCustomerResponse(Customer) returns (stream Customer);
     rpc GetCustomerRequest(stream Customer) returns (Customer);
     rpc GetGoodResponse(Good) returns (stream Good);
     rpc GetGoodRequest(stream Good) returns (Good);
-}
-
-service Conversation {
-    rpc OrderResponse(Customer) returns (stream Order);
-    rpc OrderResponse(Good) returns (stream Order);
-}
-
-message Order {
-    string id = 1;
-    string idOfCustomer = 2;
 }
 
 message Customer {
@@ -39,4 +24,3 @@ message Good {
     string BrandId = 4;
     int32 Rest = 5;
 }
-

@@ -3,7 +3,6 @@ syntax = "proto3";
 package order;
 
 option go_package = "github.com/voznikaetnepriyazn/BuyerBot";
-option csharp_namespase = "proto";
 
 service GetOrderInfo {
     rpc GetOrder(GetOrderRequest) returns (GetOrderResponse);

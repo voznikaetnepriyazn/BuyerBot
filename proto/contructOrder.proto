@@ -1,8 +1,12 @@
 syntax = "proto3";
 
+package order;
+
+option go_package = "github.com/voznikaetnepriyazn/BuyerBot";
+option csharp_namespase = "proto";
+
 service GetOrderInfo {
-    rpc GetOrderResponse(Order) returns (stream Order);
-    rpc GetOrderRequest(stream Order) returns (Order);
+    rpc GetOrder(GetOrderRequest) returns (GetOrderResponse);
 }
 
 message Order {
@@ -10,4 +14,10 @@ message Order {
     string idOfCustomer = 2;
 }
 
+message GetOrderRequest {
+    Order order = 1;
+}
 
+message GetOrderResponse {
+    Order order = 1;
+}

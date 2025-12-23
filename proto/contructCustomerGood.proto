@@ -1,10 +1,13 @@
 syntax = "proto3";
 
+package customer;
+
+option go_package = "github.com/voznikaetnepriyazn/BuyerBot";
+option csharp_namespase = "proto";
+
 service GetCustomerGoodInfo {
-    rpc GetCustomerResponse(Customer) returns (stream Customer);
-    rpc GetCustomerRequest(stream Customer) returns (Customer);
-    rpc GetGoodResponse(Good) returns (stream Good);
-    rpc GetGoodRequest(stream Good) returns (Good);
+    rpc GetCustomer(GetCustomerRequest) returns (GetCustomerResponse);
+    rpc GetGood(GetGoodRequest) returns (GetGoodRequest);
 }
 
 message Customer {
@@ -17,10 +20,26 @@ message Customer {
     int32 PhoneNumber = 7;
 }
 
+message GetCustomerRequest {
+    Customer customer = 1;
+}
+
+message GetCustomerResponse {
+    Customer customer = 1; 
+}
+
 message Good {
     string id = 1;
     string Name = 2;
     string TypeId = 3;
     string BrandId = 4;
     int32 Rest = 5;
+}
+
+message GetGoodRequest {
+    Good good = 1;
+}
+
+message GetGoodResponse {
+    Good good = 1; 
 }

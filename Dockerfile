@@ -5,12 +5,12 @@ COPY go.mod go.sum ./
 RUN go mod download
 
 COPY . .
-RUN CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -o service-build
+RUN CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -o service-order ./cmd
 
-FROM grc.io/distroless/base-debian12
+FROM gcr.io/distroless/base-debian12
 WORKDIR /app
 
-COPY --from=build /app/service-b .
+COPY --from=build /app/service-order .
 
 EXPOSE 5001
 CMD ["/app/service-b"]

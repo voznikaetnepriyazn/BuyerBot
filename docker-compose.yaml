@@ -1,0 +1,50 @@
+services:
+  service_customer:
+    build:
+      context: ./ByuerApp
+    container_name: ByuerApp
+    ports:
+      - "5000:5000"
+    networks:
+      - grpc-net
+
+  service-order:
+    build:
+      context: ./Order
+    container_name: service_order
+    ports:
+    - "5001:5001"
+    depends_on:
+    - service_customer
+    - postgres          
+    networks:
+    - grpc-net
+    environment:
+      SERVICE_CUSTOMER_ADDR: "service_customer:5000"
+      DB_HOST: "postgres"
+      DB_PORT: "5432"
+      DB_USER: "postgres"
+      DB_PASSWORD: "sveta123"
+      DB_NAME: "Order"
+      DB_SSLMODE: "disable"
+
+  postgres:
+    image: postgres:16
+    container_name: postgres
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: sveta123
+      POSTGRES_DB: Order
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - grpc-net
+
+volumes:
+  postgres_data:
+
+networks:
+  grpc-net:
+    driver: bridge

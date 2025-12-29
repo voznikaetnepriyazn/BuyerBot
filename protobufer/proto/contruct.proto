@@ -1,0 +1,42 @@
+syntax = "proto3";
+
+service GetOrderInfo {
+    rps GetOrderResponse(Order) returns (stream Order);
+    rps GetOrderRequest(stream Order) returns (Order);
+}
+
+service GetCustomerGoodInfo {
+    rps GetCustomerResponse(Customer) returns (stream Customer);
+    rps GetCustomerRequest(stream Customer) returns (Customer);
+    rps GetGoodResponse(Good) returns (stream Good);
+    rps GetGoodRequest(stream Good) returns (Good);
+}
+
+service Conversation {
+    rps OrderResponse(Customer) returns (stream Order);
+    rps OrderResponse(Good) returns (stream Order);
+}
+
+message Order {
+    string id = 1;
+    string idOfCustomer = 2;
+}
+
+message Customer {
+    string id = 1;
+    string Name = 2;
+    string Email = 3;
+    string Sity = 4;
+    string FullAddress = 5;
+    int32 PostalCode = 6;
+    int32 PhoneNumber = 7;
+}
+
+message Good {
+    string id = 1;
+    string Name = 2;
+    string TypeId = 3;
+    string BrandId = 4;
+    int32 Rest = 5;
+}
+

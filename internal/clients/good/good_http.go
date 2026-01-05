@@ -43,12 +43,11 @@ func (o *GoodHTTPClient) AddGood(ctx context.Context, Id string) (good.Good, err
 		return good, fmt.Errorf("good service returned %d", response.StatusCode)
 	}
 
-	var gooder good.Good
-	if err := json.NewDecoder(response.Body).Decode(&gooder); err != nil {
-		return gooder, err
+	if err := json.NewDecoder(response.Body).Decode(&good); err != nil {
+		return good, err
 	}
 
-	return gooder, nil
+	return good, nil
 }
 
 func (o *GoodHTTPClient) DeleteGood(ctx context.Context, Id string) error {
@@ -123,12 +122,11 @@ func (o *GoodHTTPClient) GetByIdOrder(ctx context.Context, Id string) (good.Good
 		return good, fmt.Errorf("good service returned %d", response.StatusCode)
 	}
 
-	var gooder good.Good
-	if err := json.NewDecoder(response.Body).Decode(&gooder); err != nil {
-		return gooder, err
+	if err := json.NewDecoder(response.Body).Decode(&good); err != nil {
+		return good, err
 	}
 
-	return gooder, nil
+	return good, nil
 }
 
 func (o *GoodHTTPClient) UpdateOrder(ctx context.Context, Id string) error {
@@ -206,5 +204,5 @@ func (o *GoodHTTPClient) RestOfGood(ctx context.Context, Id string) (int64, erro
 		return 0, err
 	}
 
-	return good.Good.Rest, nil
+	return gooder.Rest, nil
 }

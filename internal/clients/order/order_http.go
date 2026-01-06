@@ -27,7 +27,7 @@ func (o *OrderHTTPClient) AddOrder(ctx context.Context, Id string) (order.Order,
 	var ord order.Order
 
 	request, err := http.NewRequestWithContext(
-		ctx, "GET", fmt.Sprintf("%s/api/order?userid=%d", o.baseURL, Id), nil,
+		ctx, "POST", fmt.Sprintf("%s/api/order?userid=%d", o.baseURL, Id), nil,
 	)
 	if err != nil {
 		return ord, err
@@ -53,7 +53,7 @@ func (o *OrderHTTPClient) AddOrder(ctx context.Context, Id string) (order.Order,
 
 func (o *OrderHTTPClient) DeleteOrder(ctx context.Context, Id string) error {
 	request, err := http.NewRequestWithContext(
-		ctx, "GET", fmt.Sprintf("%s/api/order?userid=%d", o.baseURL, Id), nil,
+		ctx, "DELETE", fmt.Sprintf("%s/api/order?userid=%d", o.baseURL, Id), nil,
 	)
 	if err != nil {
 		return err
@@ -133,7 +133,7 @@ func (o *OrderHTTPClient) GetByIdOrder(ctx context.Context, Id string) (order.Or
 
 func (o *OrderHTTPClient) UpdateOrder(ctx context.Context, Id string) error {
 	request, err := http.NewRequestWithContext(
-		ctx, "GET", fmt.Sprintf("%s/api/order?userid=%d", o.baseURL, Id), nil,
+		ctx, "PUT", fmt.Sprintf("%s/api/order?userid=%d", o.baseURL, Id), nil,
 	)
 	if err != nil {
 		return err

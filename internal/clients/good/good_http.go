@@ -1,4 +1,4 @@
-package orderhttp
+package goodhttp
 
 import (
 	"context"
@@ -27,7 +27,7 @@ func (o *GoodHTTPClient) AddGood(ctx context.Context, Id string) (good.Good, err
 	var good good.Good
 
 	request, err := http.NewRequestWithContext(
-		ctx, "GET", fmt.Sprintf("%s/api/order?userid=%d", o.baseURL, Id), nil,
+		ctx, "POST", fmt.Sprintf("%s/api/good?userid=%d", o.baseURL, Id), nil,
 	)
 	if err != nil {
 		return good, err
@@ -52,7 +52,7 @@ func (o *GoodHTTPClient) AddGood(ctx context.Context, Id string) (good.Good, err
 
 func (o *GoodHTTPClient) DeleteGood(ctx context.Context, Id string) error {
 	request, err := http.NewRequestWithContext(
-		ctx, "GET", fmt.Sprintf("%s/api/order?userid=%d", o.baseURL, Id), nil,
+		ctx, "DELETE", fmt.Sprintf("%s/api/good?userid=%d", o.baseURL, Id), nil,
 	)
 	if err != nil {
 		return err
@@ -78,7 +78,7 @@ func (o *GoodHTTPClient) DeleteGood(ctx context.Context, Id string) error {
 
 func (o *GoodHTTPClient) GetAllGoods(ctx context.Context) ([]good.Good, error) {
 	request, err := http.NewRequestWithContext(
-		ctx, "GET", fmt.Sprintf("%s/api/order?userid=%d", o.baseURL), nil,
+		ctx, "GET", fmt.Sprintf("%s/api/order?userid", o.baseURL), nil,
 	)
 	if err != nil {
 		return nil, err
@@ -131,7 +131,7 @@ func (o *GoodHTTPClient) GetByIdOrder(ctx context.Context, Id string) (good.Good
 
 func (o *GoodHTTPClient) UpdateOrder(ctx context.Context, Id string) error {
 	request, err := http.NewRequestWithContext(
-		ctx, "GET", fmt.Sprintf("%s/api/good?userid=%d", o.baseURL, Id), nil,
+		ctx, "PUT", fmt.Sprintf("%s/api/good?userid=%d", o.baseURL, Id), nil,
 	)
 	if err != nil {
 		return err

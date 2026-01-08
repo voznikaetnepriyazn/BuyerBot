@@ -33,10 +33,10 @@ func (g *GoodHandler) RestGood(ctx context.Context, bot *tgbotapi.BotAPI, update
 
 	rest, err := good.RestOfGood(ctx, args[0])
 	if err != nil {
-		bot.Send(tgborapi.NewMessage(chatID, fmt.Sprintf("Error: %d", err)))
+		bot.Send(tgbotapi.NewMessage(chatID, fmt.Sprintf("Error: %d", err)))
 		return
 	}
-	bot.Send(tgborapi.NewMessage(chatID, fmt.Sprintf("Rest of good %s: %d", args[0], rest)))
+	bot.Send(tgbotapi.NewMessage(chatID, fmt.Sprintf("Rest of good %s: %d", args[0], rest)))
 }
 
 func (g *GoodHandler) IsGoodAvaliableForOrder(ctx context.Context, bot *tgbotapi.BotAPI, update tgbotapi.Update) {
@@ -52,7 +52,7 @@ func (g *GoodHandler) IsGoodAvaliableForOrder(ctx context.Context, bot *tgbotapi
 
 	avaliable, err := good.IsAvaliableForOrder(ctx, args[0])
 	if err != nil {
-		bot.Send(tgborapi.NewMessage(chatID, fmt.Sprintf("Error: %d", err)))
+		bot.Send(tgbotapi.NewMessage(chatID, fmt.Sprintf("Error: %d", err)))
 		return
 	}
 
@@ -60,5 +60,5 @@ func (g *GoodHandler) IsGoodAvaliableForOrder(ctx context.Context, bot *tgbotapi
 	if !avaliable {
 		status = "Is not avaliable"
 	}
-	bot.Send(tgborapi.NewMessage(chatID, fmt.Sprintf("Good %s: %d", args[0], status)))
+	bot.Send(tgbotapi.NewMessage(chatID, fmt.Sprintf("Good %s: %d", args[0], status)))
 }

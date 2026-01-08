@@ -6,7 +6,7 @@ import (
 )
 
 type CustomerGoodGateway interface {
-	AddCustomer(ctx context.Context, Id string) (customer.Customer, error)
+	AddCustomer(ctx context.Context, cust customer.Customer) (customer.Customer, error)
 	Deletecustomer(ctx context.Context, Id string) error
 	GetAllCustomers(ctx context.Context) ([]customer.Customer, error)
 	GetByIdCustomer(ctx context.Context, Id string) (customer.Customer, error)

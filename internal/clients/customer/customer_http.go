@@ -23,11 +23,11 @@ func InitCustomerHTTPClient(baseURL string) *CustomerHTTPClient {
 	}
 }
 
-func (o *CustomerHTTPClient) AddCustomer(ctx context.Context, Id string) (customer.Customer, error) {
+func (o *CustomerHTTPClient) AddCustomer(ctx context.Context, cust customer.Customer) (customer.Customer, error) {
 	var cus customer.Customer
 
 	request, err := http.NewRequestWithContext(
-		ctx, "POST", fmt.Sprintf("%s/api/order?userid=%d", o.baseURL, Id), nil,
+		ctx, "POST", fmt.Sprintf("%s/api/order?userid=%d", o.baseURL, cust), nil,
 	)
 	if err != nil {
 		return cus, err

@@ -13,7 +13,7 @@ type Router struct {
 	goodHandler     *GoodHandler
 }
 
-func NewRouter(customerHandler *CustomerHandler, orderHandler *OrderHandler, goodHandler *GoodHandler) *Router {
+func InitRouter(customerHandler *CustomerHandler, orderHandler *OrderHandler, goodHandler *GoodHandler) *Router {
 	return &Router{
 		customerHandler: customerHandler,
 		orderHandler:    orderHandler,
@@ -29,9 +29,13 @@ func (r *Router) HandleUpdate(ctx context.Context, bot *tgbotapi.BotAPI, update 
 	if update.Message.IsCommand() {
 		r.handleCommand(ctx, bot, update)
 		return
+	} else {
+		r.handleMessage(ctx, bot, update)
 	}
 
-	r.handleMessage(ctx, bot, update)
+	/*if update.CallbackQuery != nil{
+		r.handleCallback(ctx, bot, update)
+	}*/
 }
 
 func (r *Router) handleCommand(ctx context.Context, bot *tgbotapi.BotAPI, update tgbotapi.Update) {
@@ -50,8 +54,6 @@ func (r *Router) handleCommand(ctx context.Context, bot *tgbotapi.BotAPI, update
 
 	case "addcustomer":
 		r.customerHandler.StartAddCustomer(ctx, bot, update)
-		r.customerHandler.HandleMessage(ctx, bot, update)
-		r.customerHandler.AddCustomer(ctx, bot, update)
 
 	case "addorder":
 		r.orderHandler.StartAddOrder(ctx, bot, update)
@@ -73,6 +75,10 @@ func (r *Router) handleCommand(ctx context.Context, bot *tgbotapi.BotAPI, update
 }
 
 func (r *Router) handleMessage(ctx context.Context, bot *tgbotapi.BotAPI, update tgbotapi.Update) {
-	// Передаём сообщение в обработчик, который отвечает за диалоговые состояния
+
 	r.customerHandler.HandleMessage(ctx, bot, update)
 }
+
+/*func (r *Router) handleCallback(ctx context.Context, bot *tgbotapi.BotAPI, update tgbotapi.Update) {
+	r.orderHandler.HandleCallback(ctx, bot, update)
+}*/

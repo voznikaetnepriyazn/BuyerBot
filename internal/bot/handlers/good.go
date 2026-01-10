@@ -60,5 +60,5 @@ func (g *GoodHandler) IsGoodAvaliableForOrder(ctx context.Context, bot *tgbotapi
 	if !avaliable {
 		status = "Is not avaliable"
 	}
-	bot.Send(tgbotapi.NewMessage(chatID, fmt.Sprintf("Good %s: %d", args[0], status)))
+	bot.Send(tgbotapi.NewMessage(chatID, fmt.Sprintf("Good %s: %v", args[0], status)))
 }

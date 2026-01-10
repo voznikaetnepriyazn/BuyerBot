@@ -27,7 +27,7 @@ func (o *CustomerHTTPClient) AddCustomer(ctx context.Context, cust customer.Cust
 	var cus customer.Customer
 
 	request, err := http.NewRequestWithContext(
-		ctx, "POST", fmt.Sprintf("%s/api/order?userid=%d", o.baseURL, cust), nil,
+		ctx, "POST", fmt.Sprintf("%s/api/order?userid=%v", o.baseURL, cust), nil,
 	)
 	if err != nil {
 		return cus, err
@@ -53,7 +53,7 @@ func (o *CustomerHTTPClient) AddCustomer(ctx context.Context, cust customer.Cust
 
 func (o *CustomerHTTPClient) DeleteCustomer(ctx context.Context, Id string) error {
 	request, err := http.NewRequestWithContext(
-		ctx, "DELETE", fmt.Sprintf("%s/api/customer?userid=%d", o.baseURL, Id), nil,
+		ctx, "DELETE", fmt.Sprintf("%s/api/customer?userid=%v", o.baseURL, Id), nil,
 	)
 	if err != nil {
 		return err
@@ -107,7 +107,7 @@ func (o *CustomerHTTPClient) GetByIdCustomer(ctx context.Context, Id string) (cu
 	var cus customer.Customer
 
 	request, err := http.NewRequestWithContext(
-		ctx, "GET", fmt.Sprintf("%s/api/order?userid=%d", o.baseURL, Id), nil,
+		ctx, "GET", fmt.Sprintf("%s/api/order?userid=%v", o.baseURL, Id), nil,
 	)
 	if err != nil {
 		return cus, err
@@ -133,7 +133,7 @@ func (o *CustomerHTTPClient) GetByIdCustomer(ctx context.Context, Id string) (cu
 
 func (o *CustomerHTTPClient) UpdateCustomer(ctx context.Context, Id string) error {
 	request, err := http.NewRequestWithContext(
-		ctx, "PUT", fmt.Sprintf("%s/api/order?userid=%d", o.baseURL, Id), nil,
+		ctx, "PUT", fmt.Sprintf("%s/api/order?userid=%v", o.baseURL, Id), nil,
 	)
 	if err != nil {
 		return err
@@ -159,7 +159,7 @@ func (o *CustomerHTTPClient) UpdateCustomer(ctx context.Context, Id string) erro
 
 func (o *CustomerHTTPClient) IsCustomerCreated(ctx context.Context, Id string) (bool, error) {
 	request, err := http.NewRequestWithContext(
-		ctx, "GET", fmt.Sprintf("%s/api/customer?userid=%d", o.baseURL, Id), nil,
+		ctx, "GET", fmt.Sprintf("%s/api/customer?userid=%v", o.baseURL, Id), nil,
 	)
 	if err != nil {
 		return false, err

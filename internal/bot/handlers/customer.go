@@ -141,5 +141,5 @@ func (g *CustomerHandler) AddCustomer(ctx context.Context, bot *tgbotapi.BotAPI,
 		return
 	}
 
-	bot.Send(tgbotapi.NewMessage(chatID, fmt.Sprintf("Customer %s", add)))
+	bot.Send(tgbotapi.NewMessage(chatID, fmt.Sprintf("Customer %v", add)))
 }
